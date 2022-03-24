@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: rgb(197, 223, 245);
+}
+
+#sun {
+    position: absolute;
+    z-index: 1;
+    top: -5em;
+    left: -1em;
+}
+
+#sun article {
+    height: 22em;
+    width: 22em;
+    max-width: 100%;
+    border-radius: 50%;
+    display: inline-block;
+    background: #fdd835;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  #sun p {
+    margin: 0;
+    font-size: calc(.5vw + .4vh + .4vmin);
+    width: 20em;
+    line-height: 1.4;
+    position: relative;
+    top: 30%;
+    left: 51%;
+    transform: translate(-50%,-50%);
+  }
+  #sun .left-clip {
+    float:left;
+    width: 50%;
+    height: 100%;
+    background: #fdd835;
+    shape-outside: polygon(0% 0%, 100% 0%, 75% 1.5%, 50% 7%, 30% 14.5%, 10% 28%, 0% 50%, 0% 100%, 100% 100%, 58% 95%, 30% 85.5%, 10% 72%, 0% 50%);
+    clip-path: polygon(0% 0%, 100% 0%, 75% 1.5%, 50% 7%, 30% 14.5%, 10% 28%, 0% 50%, 0% 100%, 100% 100%, 58% 95%, 30% 85.5%, 10% 72%, 0% 50%);
+    opacity: 0; /* set to 1 to see the shape */
+  }
+  #sun .right-clip {
+    float:right;
+    width: 50%;
+    height: 100%;
+    background: #fdd835;
+    shape-outside: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%, 66% 83.5%, 100% 50%, 66% 16.5%, 0% 0%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%, 66% 83.5%, 100% 50%, 66% 16.5%, 0% 0%);
+    opacity: 0; /* set to 1 to see the shape */
+  }
+
+ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow-x: scroll;
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-type: x mandatory;
+}
+
+
+li {
+    min-width: 100vw;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(197, 223, 245);
+    background: linear-gradient(0deg, rgb(157, 206, 236) 0%, rgb(197, 223, 245) 100%);
+    background-repeat: no-repeat;
+    scroll-snap-align: center;
+}
+
+.cloud {
+	width: 37.5em;
+	
+	background: #f2f9fe;
+
+	border-radius: 100px;
+
+	position: relative;
+	margin: 10em auto 5em;
+    z-index: 5;
+}
+
+.cloud:after, .cloud:before {
+	content: '';
+	position: absolute;
+
+	background: #f2f9fe;
+	z-index: -1;
+}
+
+.cloud:after {
+    width: 12.5em; 
+    height: 9.375em;
+
+    top: -100px; 
+    left: 50px;
+
+    border-radius: 50%;
+}
+
+.cloud:before {
+    width: 22.5em; 
+    height: 12.5em;
+
+    top: -146px; 
+    right: 50px;
+
+    border-radius: 200%;
+}
+
+h2 {
+    color: rgb(96, 129, 158);
+    position: relative;
+    text-align: right;
+    top: -4em;
+    left: -7em;
+
+    font-size: calc(1vw + 1vh + 1vmin);
+}
+
+p {
+    position: relative;
+    left: 4em;
+    top: -3em;
+
+    font-size: calc(.7vw + .7vh + .7vmin);
+    color: black;
+    width: 30vw;
+}
+
+
+
+li img {
+    height: 20em;
+    position: absolute;
+    bottom: 10vh;
+
+    animation-name: wave;
+    animation-duration: 1.5s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    transform-origin: 65% 100%;
+    z-index: 1;
+}
+
+li:nth-of-type(2) img {
+    animation-delay: .3s;
+}
+
+li:nth-of-type(3) img {
+    animation-delay: -.3s;
+}
+
+li:nth-of-type(4) img {
+    animation-delay: -.6s;
+    bottom: 11.5vh;
+}
+
+div img {
+    position: absolute;
+    bottom: 0;
+    pointer-events: none;
+}
+
+div img:nth-of-type(2) {
+    z-index: 2;
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(-1deg) translateY(-7px);
+    }
+
+    100% {
+        transform: rotate(2deg);
+    }
+}
+
+
+@media (max-width:880px) {
+    li img, li:nth-of-type(4) img {
+        height: 13em;
+        bottom: 6vh;
+    }
+}
+
+@media (max-width:700px) {
+    li img, li:nth-of-type(4) img {
+        bottom: 2vh;
+    }
+
+    .cloud {
+        width: 25em;
+        height: 14em;
+        
+        background: #f2f9fe;
+    
+        border-radius: 100px;
+    
+        position: relative;
+        margin: 12em auto 6em;
+        z-index: 5;
+    }
+
+    .cloud:after {
+        top: -4em; 
+        left: 2em;
+    }
+    
+    .cloud:before {
+        width: 10em; 
+        height: 10em;
+    
+        top: -6em; 
+        right: 2em;
+    }
+
+    h2 {
+        left: -4em;
+    }
+
+    p {
+        width: 45vw;
+    }
+}
+
+@media (max-width:500px) {
+    li img, li:nth-of-type(4) img {
+        bottom: 0vh;
+    }
+}

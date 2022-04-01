@@ -1,0 +1,28 @@
+{
+  "name": "browser-technologies-2122",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farrahton/browser-technologies-2122.git"
+  },
+  "author": "Farrahton Piers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/farrahton/browser-technologies-2122/issues"
+  },
+  "homepage": "https://github.com/farrahton/browser-technologies-2122#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.3"
+  }
+}

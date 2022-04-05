@@ -1,5 +1,3 @@
-require('dotenv').config()
-
 import express from 'express';
 import { engine } from 'express-handlebars';
 import bodyParser from "body-parser";

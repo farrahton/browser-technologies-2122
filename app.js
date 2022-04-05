@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 import express from 'express';
 import { engine } from 'express-handlebars';
 import bodyParser from "body-parser";
@@ -27,6 +29,7 @@ app.get('/', (req, res) => {
         res.render('home')
     })
 })
+
 let resultaten;
 
 app.post('/', (req, res) => {
@@ -45,3 +48,4 @@ app.post('/', (req, res) => {
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
+

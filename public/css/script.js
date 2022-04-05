@@ -1,10 +1,10 @@
 // input select en textarea zijn belangrijk
 // let form = document... ('form') staat voor alle elementen in de formulier var kan ook met let 
 // var form = document.querySelector('form')
-var form = document.forms
-for (var el in form.elements) {
+// var form = document.forms
+// for (var el in form.elements) {
 
-}
+// }
 
 
 // document.images 

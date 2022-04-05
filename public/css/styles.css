@@ -7,7 +7,7 @@
 }
 
 /* @supports (background: linear-gradient) { */
-     html {
+html {
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background: linear-gradient(10deg, var(--minor-two) 24%, rgba(0,0,0,0) 24%), linear-gradient(21deg, var(--minor-three) 46%, var(--minor-one) 46%);
     background-size: cover;
@@ -21,7 +21,7 @@ h1 {
 }
 
 fieldset {
-    border: none;
+    border: solid transparent;
     /* background-color: transparent;
     border-radius: .3em; */
     /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
@@ -29,7 +29,7 @@ fieldset {
     /* box-shadow: rgba(58, 170, 52, 0.4) 5px 5px, rgba(58, 170, 52, 0.3) 10px 10px, rgba(58, 170, 52, 0.2) 15px 15px, rgba(58, 170, 52, 0.1)  20px 20px, rgba(58, 170, 52, 0.05) 25px 25px; */
     margin: 5em;
     background: rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
+    border-radius: 1em;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     /* backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px); */
@@ -42,38 +42,50 @@ legend {
 }
 
 .button {
-  appearance: button;
-  background-color: #1899D6;
-  border: solid transparent;
-  border-radius: 16px;
-  border-width: 0 0 4px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-family: din-round,sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: .8px;
-  line-height: 20px;
-  margin: 0;
-  outline: none;
-  overflow: visible;
-  padding: 13px 16px;
-  text-align: center;
-  text-transform: uppercase;
-  touch-action: manipulation;
-  transform: translateZ(0);
-  transition: filter .2s;
-  user-select: none;
-  -webkit-user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  width: 10em;
-}
+    background-color: #1899D6;
+    border: solid transparent;
+    border-radius: 1em;
+    color: #ffff;
+    cursor: pointer;
+    font-family: din-round,sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 0;
+    padding: 13px 16px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 10em;
+  }
 
 .button:hover {
-  filter: brightness(1.1);
+    filter: brightness(1.1);
 }
 
+select {
+    border: none;
+    border-radius: 1em;
+    border: solid transparent;
+    height: 3em;
+    text-align: center;
+    
+}
+
+input[type="number"] {
+    border: solid transparent;
+    border-radius: 1em;
+    height: 3em;
+    text-align: center;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    opacity: 1;
+}
+
+textarea {
+    border-radius: 1em;
+    text-align: center;
+    border: solid transparent;
+}
 

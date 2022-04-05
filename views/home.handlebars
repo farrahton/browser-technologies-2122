@@ -13,17 +13,17 @@
 		<br>
 
 		<label for="voornaam">Voornaam:</label>
-		<input type="text" id="voornaam" name="voornaam">
+		<input required type="text" id="voornaam" name="voornaam">
 
 		<br><br>
 
 		<label for="achternaam">Achternaam:</label>
-		<input type="text" id="achternaam" name="achternaam">
+		<input required type="text" id="achternaam" name="achternaam">
 
 		<br><br>
 
 		<label for="studentennummer">Studentennummer:</label>
-		<input type="text" id="studentennummer" name="studentennummer" placeholder="5008">
+		<input required type="text" id="studentennummer" name="studentennummer" placeholder="5008">
 
 		<br><br>
 
@@ -41,31 +41,52 @@
 			</svg>
 		</legend>
 
-		<h3>Welke docent(en) had je voor dit vak?</h3>
 
-		<input type="checkbox" id="Robert" name="wafs-docent" value="Robert">
-		<label for="Robert">Robert Spier</label><br>
-		<input type="checkbox" id="Peter-Paul" name="wafs-docent" value="Peter-Paul">
-		<label for="Peter-Paul">Peter-Paul Koch</label><br>
-		<input type="checkbox" id="anders" name="wafs-docent" value="anders">
-		<label for="anders"><textarea>...</textarea></label>
+		<h2>Welke docent(en) had je voor dit vak?</h2>
+
+		<select required name="wafs-docent1" id="wafs-docent1">
+			<option value="wafs-docent1-joost" selected>Joost Faber</option>
+			<option value="wafs-docent1-koop"> Koop Reynders</option>
+			<option value="wafs-docent1-sanne">Sanne Hooft</option>
+			<option value="wafs-docent1-vasilis">Vasilis van Gemert</option>
+			<option value="wafs-docent1-justus">Justus Sturkenboom</option>
+			<option value="wafs-docent1-declan">Declan Rek</option>
+			<option value="wafs-docent1-robert">Robert Spier</option>
+			<option value="wafs-docent1-peter-paul">Peter-Paul Koch</option>
+			<option value="wafs-docent1-"></option>
+		</select>
+
+		<select required name="wafs-docent2" id="wafs-docent2">
+			<option value="wafs-docent-joost">Joost Faber</option>
+			<option value="wafs-docent2-koop" selected> Koop Reynders</option>
+			<option value="wafs-docent2-sanne">Sanne Hooft</option>
+			<option value="wafs-docent2-vasilis">Vasilis van Gemert</option>
+			<option value="wafs-docent2-justus">Justus Sturkenboom</option>
+			<option value="wafs-docent2-declan">Declan Rek</option>
+			<option value="wafs-docent2-robert">Robert Spier</option>
+			<option value="wafs-docent2-peter-paul">Peter-Paul Koch</option>
+			<option value="wafs-docent2-"></option>
+		</select>
 
 		<br>
 
-		<h3>Weken waarin je het vak deed:</h3>
-		<select name="Docent" id="docent">
-			<option value="week1-3">Week 1-3</option>
+		<h2>Weken waarin je het vak deed:</h2>
+		<select required name="wafs-week" id="wafs-week">
+			<option value="week1-3" selected>Week 1-3</option>
+			<option value="week4"> Week 4</option>
 			<option value="week5-7">Week 5-7</option>
+			<option value="week8"> Week 8</option>
 			<option value="week9-11">Week 9-11</option>
+			<option value="week12">Week 12</option>
 		</select>
 
 		<label for="wafs-cijferSchaal">
-			<h3>Wat vond je van de lesstof? (1= makkelijk, 10= moeilijk)</h3>
+			<h2>Wat vond je van de lesstof op een schaal van 1 tot 10? (1= makkelijk, 10= moeilijk)</h2>
 		</label>
-		<input type="number" id="wafs-cijferSchaal" name="wafs-cijferSchaal" min="1" max="10">
+		<input required type="number" id="wafs-cijferSchaal" name="wafs-cijferSchaal" min="1" max="10">
 
-		<h3>Hoe duidelijk is het uitgelegd?</h3>
-		<input type="radio" id="wafs-geen-uitleg" name="wafs-uitlegSchaal" value="wafs-geen-uitleg">
+		<h2>Hoe duidelijk is het uitgelegd?</h2>
+		<input type="radio" id="wafs-geen-uitleg" name="wafs-uitlegSchaal" value="wafs-geen-uitleg" required>
 		<label for="wafs-geen-uitleg">Zo goed als geen uitleg gekregen</label><br>
 		<input type="radio" id="wafs-slaapverwekkend" name="wafs-uitlegSchaal" value="wafs-slaapverwekkend">
 		<label for="wafs-slaapverwekkend">Er was uitleg, maar het was slaapverwekkend</label><br>
@@ -80,7 +101,7 @@
 			te
 			ronden</label><br>
 
-		<h3>Eigen inzicht, dus hoe goed snap je het?</h3>
+		<h2>Eigen inzicht, dus hoe goed snap je het?</h2>
 		<input type="radio" id="wafs-inzicht1" name="wafs-inzichtAntwoord" value="wafs-inzicht1">
 		<label for="wafs-inzicht1">Ik heb niets onthouden</label><br>
 		<input type="radio" id="wafs-inzicht2" name="wafs-inzichtAntwoord" value="wafs-inzicht2">
@@ -91,12 +112,13 @@
 		<input type="radio" id="wafs-inzicht4" name="wafs-inzichtAntwoord" value="wafs-inzicht4">
 		<label for="wafs-inzicht4">Ik kan het zelf schrijven</label><br>
 		<input type="radio" id="wafs-inzicht5" name="wafs-inzichtAntwoord" value="wafs-inzicht5">
-		<label for="inzicht5">Ik kan het zelf schrijven én aan mensen met verschillende levels van kennis
+		<label for="wafs-inzicht5">Ik kan het zelf schrijven én aan mensen met verschillende levels van kennis
 			uitleggen</label><br>
 
-		<h3>Nog iets te delen?</h3>
-		<textarea>Nee, niet per se...</textarea>
-		<button type="submit">Verstuur alles over dit vak</button>
+		<label for="wafs-overig">
+			<h2>Nog iets te delen? </h2>
+		</label>
+		<textarea id="wafs-overig" name="wafs-overig">Nee, niet per se...</textarea>
 	</fieldset>
 
 	<br><br>
@@ -111,31 +133,50 @@
 			</svg>
 		</legend>
 
-		<h3>Welke docent(en) had je voor dit vak?</h3>
+		<h2>Welke docent(en) had je voor dit vak?</h2>
 
-		<input type="checkbox" id="Robert" name="css-docent" value="Robert">
-		<label for="Robert">Robert Spier</label><br>
-		<input type="checkbox" id="Peter-Paul" name="css-docent" value="Peter-Paul">
-		<label for="Peter-Paul">Peter-Paul Koch</label><br>
-		<input type="checkbox" id="anders" name="css-docent" value="anders">
-		<label for="anders"><textarea>...</textarea></label>
+		<select required name="css-docent1" id="css-docent1">
+			<option value="css-docent1-joost">Joost Faber</option>
+			<option value="css-docent1-koop"> Koop Reynders</option>
+			<option value="css-docent1-sanne" selected>Sanne Hooft</option>
+			<option value="css-docent1-vasilis">Vasilis van Gemert</option>
+			<option value="css-docent1-justus">Justus Sturkenboom</option>
+			<option value="css-docent1-declan">Declan Rek</option>
+			<option value="css-docent1-robert">Robert Spier</option>
+			<option value="css-docent1-peter-paul">Peter-Paul Koch</option>
+			<option value="css-docent1-"></option>
+		</select>
+
+		<select required name="css-docent2" id="css-docent2">
+			<option value="css-docent-joost">Joost Faber</option>
+			<option value="css-docent2-koop"> Koop Reynders</option>
+			<option value="css-docent2-sanne">Sanne Hooft</option>
+			<option value="css-docent2-vasilis" selected>Vasilis van Gemert</option>
+			<option value="css-docent2-justus">Justus Sturkenboom</option>
+			<option value="css-docent2-declan">Declan Rek</option>
+			<option value="css-docent2-robert">Robert Spier</option>
+			<option value="css-docent2-peter-paul">Peter-Paul Koch</option>
+			<option value="css-docent2-"></option>
+		</select>
 
 		<br>
 
-		<h3>Weken waarin je het vak deed:</h3>
-		<select name="Docent" id="docent">
-			<option value="week1-3">Week 1-3</option>
+		<h2>Weken waarin je het vak deed:</h2>
+		<select required name="css-week" id="css-week">
+			<option value="week1-3" selected>Week 1-3</option>
+			<option value="week4"> Week 4</option>
 			<option value="week5-7">Week 5-7</option>
+			<option value="week8"> Week 8</option>
 			<option value="week9-11">Week 9-11</option>
+			<option value="week12">Week 12</option>
 		</select>
 
 		<label for="css-cijferSchaal">
-			<h3>Wat vond je van de lesstof? (1= makkelijk, 10= moeilijk)</h3>
+			<h2>Wat vond je van de lesstof op een schaal van 1 tot 10? (1= makkelijk, 10= moeilijk)</h2>
 		</label>
+		<input required type="number" id="css-cijferSchaal" name="css-cijferSchaal" min="1" max="10">
 
-		<input type="number" id="css-cijferSchaal" name="css-cijferSchaal" min="1" max="10">
-
-		<h3>Hoe duidelijk is het uitgelegd?</h3>
+		<h2>Hoe duidelijk is het uitgelegd?</h2>
 		<input type="radio" id="css-uitlegschaal1" name="css-uitlegSchaal" value="css-uitlegschaal1">
 		<label for="css-uitlegschaal1">Zo goed als geen uitleg gekregen</label><br>
 		<input type="radio" id="css-uitlegschaal2" name="css-uitlegSchaal" value="css-uitlegschaal2">
@@ -151,7 +192,7 @@
 			te
 			ronden</label><br>
 
-		<h3>Eigen inzicht, dus hoe goed snap je het?</h3>
+		<h2>Eigen inzicht, dus hoe goed snap je het?</h2>
 		<input type="radio" id="css-inzicht1" name="css-inzichtAntwoord" value="css-inzicht1">
 		<label for="css-inzicht1">Ik heb niets onthouden</label><br>
 		<input type="radio" id="css-inzicht2" name="css-inzichtAntwoord" value="css-inzicht2">
@@ -165,9 +206,10 @@
 		<label for="css-inzicht5">Ik kan het zelf schrijven én aan mensen met verschillende levels van kennis
 			uitleggen</label><br>
 
-		<h3>Nog iets te delen?</h3>
-		<textarea>Nee, niet per se...</textarea>
-		<button type="submit">Verstuur alles over dit vak</button>
+		<label for="css-overig">
+			<h2>Nog iets te delen? </h2>
+		</label>
+		<textarea id="css-overig" name="css-overig">Nee, niet per se...</textarea>
 	</fieldset>
 
 	<br><br>
@@ -182,31 +224,50 @@
 			</svg>
 		</legend>
 
-		<h3>Welke docent(en) had je voor dit vak?</h3>
+		<h2>Welke docent(en) had je voor dit vak?</h2>
 
-		<input type="checkbox" id="Robert" name="project1-docent" value="Robert">
-		<label for="Robert">Robert Spier</label><br>
-		<input type="checkbox" id="Peter-Paul" name="project1-docent" value="Peter-Paul">
-		<label for="Peter-Paul">Peter-Paul Koch</label><br>
-		<input type="checkbox" id="anders" name="project1-docent" value="anders">
-		<label for="anders"><textarea>...</textarea></label>
+		<select required name="project1-docent1" id="project1-docent1">
+			<option value="project1-docent1-joost">Joost Faber</option>
+			<option value="project1-docent1-koop"> Koop Reynders</option>
+			<option value="project1-docent1-sanne">Sanne Hooft</option>
+			<option value="project1-docent1-vasilis">Vasilis van Gemert</option>
+			<option value="project1-docent1-justus">Justus Sturkenboom</option>
+			<option value="project1-docent1-declan">Declan Rek</option>
+			<option value="project1-docent1-robert">Robert Spier</option>
+			<option value="project1-docent1-peter-paul">Peter-Paul Koch</option>
+			<option value="project1-docent1-"></option>
+		</select>
+
+		<select name="project1-docent2" id="project1-docent2">
+			<option value="project1-docent-joost">Joost Faber</option>
+			<option value="project1-docent2-koop"> Koop Reynders</option>
+			<option value="project1-docent2-sanne">Sanne Hooft</option>
+			<option value="project1-docent2-vasilis">Vasilis van Gemert</option>
+			<option value="project1-docent2-justus">Justus Sturkenboom</option>
+			<option value="project1-docent2-declan">Declan Rek</option>
+			<option value="project1-docent2-robert">Robert Spier</option>
+			<option value="project1-docent2-peter-paul">Peter-Paul Koch</option>
+			<option value="project1-docent2-"></option>
+		</select>
 
 		<br>
 
-		<h3>Weken waarin je het vak deed:</h3>
-		<select name="Docent" id="docent">
+		<h2>Weken waarin je het vak deed:</h2>
+		<select required name="project1-week" id="project1-week">
 			<option value="week1-3">Week 1-3</option>
+			<option value="week4" selected> Week 4</option>
 			<option value="week5-7">Week 5-7</option>
+			<option value="week8"> Week 8</option>
 			<option value="week9-11">Week 9-11</option>
+			<option value="week12">Week 12</option>
 		</select>
 
 		<label for="project1-cijferSchaal">
-			<h3>Wat vond je van de lesstof? (1= makkelijk, 10= moeilijk)</h3>
+			<h2>Wat vond je van de lesstof op een schaal van 1 tot 10? (1= makkelijk, 10= moeilijk)</h2>
 		</label>
+		<input required type="number" id="project1-cijferSchaal" name="project1-cijferSchaal" min="1" max="10">
 
-		<input type="number" id="project1-cijferSchaal" name="project1-cijferSchaal" min="1" max="10">
-
-		<h3>Hoe duidelijk is het uitgelegd?</h3>
+		<h2>Hoe duidelijk is het uitgelegd?</h2>
 		<input type="radio" id="project1-uitlegschaal1" name="project1-uitlegSchaal" value="project1-uitlegschaal1">
 		<label for="project1-uitlegschaal1">Zo goed als geen uitleg gekregen</label><br>
 		<input type="radio" id="project1-uitlegschaal2" name="project1-uitlegSchaal" value="project1-uitlegschaal2">
@@ -224,7 +285,7 @@
 			te
 			ronden</label><br>
 
-		<h3>Eigen inzicht, dus hoe goed snap je het?</h3>
+		<h2>Eigen inzicht, dus hoe goed snap je het?</h2>
 		<input type="radio" id="project1-inzicht1" name="project1-inzichtAntwoord" value="project1-inzicht1">
 		<label for="project1-inzicht1">Ik heb niets onthouden</label><br>
 		<input type="radio" id="project1-inzicht2" name="project1-inzichtAntwoord" value="project1-inzicht2">
@@ -238,9 +299,10 @@
 		<label for="project1-inzicht5">Ik kan het zelf schrijven én aan mensen met verschillende levels van kennis
 			uitleggen</label><br>
 
-		<h3>Nog iets te delen?</h3>
-		<textarea>Nee, niet per se...</textarea>
-		<button type="submit">Verstuur alles over dit vak</button>
+		<label for="project1-overig">
+			<h2>Nog iets te delen? </h2>
+		</label>
+		<textarea id="project1-overig" name="project1-overig">Nee, niet per se...</textarea>
 	</fieldset>
 
 	<br><br>
@@ -255,31 +317,49 @@
 			</svg>
 		</legend>
 
-		<h3>Welke docent(en) had je voor dit vak?</h3>
+		<h2>Welke docent(en) had je voor dit vak?</h2>
 
-		<input type="checkbox" id="Robert" name="pwa-docent" value="Robert">
-		<label for="Robert">Robert Spier</label><br>
-		<input type="checkbox" id="Peter-Paul" name="pwa-docent" value="Peter-Paul">
-		<label for="Peter-Paul">Peter-Paul Koch</label><br>
-		<input type="checkbox" id="anders" name="pwa-docent" value="anders">
-		<label for="anders"><textarea>...</textarea></label>
+		<select required name="pwa-docent1" id="pwa-docent1">
+			<option value="pwa-docent1-joost">Joost Faber</option>
+			<option value="pwa-docent1-koop"> Koop Reynders</option>
+			<option value="pwa-docent1-sanne">Sanne Hooft</option>
+			<option value="pwa-docent1-vasilis">Vasilis van Gemert</option>
+			<option value="pwa-docent1-justus" selected>Justus Sturkenboom</option>
+			<option value="pwa-docent1-declan">Declan Rek</option>
+			<option value="pwa-docent1-robert">Robert Spier</option>
+			<option value="pwa-docent1-peter-paul">Peter-Paul Koch</option>
+			<option value="pwa-docent1-"></option>
+		</select>
 
+		<select required name="pwa-docent2" id="pwa-docent2">
+			<option value="pwa-docent-joost">Joost Faber</option>
+			<option value="pwa-docent2-koop"> Koop Reynders</option>
+			<option value="pwa-docent2-sanne">Sanne Hooft</option>
+			<option value="pwa-docent2-vasilis">Vasilis van Gemert</option>
+			<option value="pwa-docent2-justus">Justus Sturkenboom</option>
+			<option value="pwa-docent2-declan" selected>Declan Rek</option>
+			<option value="pwa-docent2-robert">Robert Spier</option>
+			<option value="pwa-docent2-peter-paul">Peter-Paul Koch</option>
+			<option value="pwa-docent2-"></option>
+		</select>
 		<br>
 
-		<h3>Weken waarin je het vak deed:</h3>
-		<select name="Docent" id="docent">
+		<h2>Weken waarin je het vak deed:</h2>
+		<select required name="pwa-week" id="pwa-week">
 			<option value="week1-3">Week 1-3</option>
-			<option value="week5-7">Week 5-7</option>
+			<option value="week4"> Week 4</option>
+			<option value="week5-7" selected>Week 5-7</option>
+			<option value="week8"> Week 8</option>
 			<option value="week9-11">Week 9-11</option>
+			<option value="week12">Week 12</option>
 		</select>
 
 		<label for="pwa-cijferSchaal">
-			<h3>Wat vond je van de lesstof? (1= makkelijk, 10= moeilijk)</h3>
+			<h2>Wat vond je van de lesstof op een schaal van 1 tot 10? (1= makkelijk, 10= moeilijk)</h2>
 		</label>
+		<input required type="number" id="pwa-cijferSchaal" name="pwa-cijferSchaal" min="1" max="10">
 
-		<input type="number" id="pwa-cijferSchaal" name="pwa-cijferSchaal" min="1" max="10">
-
-		<h3>Hoe duidelijk is het uitgelegd?</h3>
+		<h2>Hoe duidelijk is het uitgelegd?</h2>
 		<input type="radio" id="pwa-uitlegschaal1" name="pwa-uitlegSchaal" value="pwa-uitlegschaal1">
 		<label for="pwa-uitlegschaal1">Zo goed als geen uitleg gekregen</label><br>
 		<input type="radio" id="pwa-uitlegschaal2" name="pwa-uitlegSchaal" value="pwa-uitlegschaal2">
@@ -295,7 +375,7 @@
 			te
 			ronden</label><br>
 
-		<h3>Eigen inzicht, dus hoe goed snap je het?</h3>
+		<h2>Eigen inzicht, dus hoe goed snap je het?</h2>
 		<input type="radio" id="pwa-inzicht1" name="pwa-inzichtAntwoord" value="pwa-inzicht1">
 		<label for="pwa-inzicht1">Ik heb niets onthouden</label><br>
 		<input type="radio" id="pwa-inzicht2" name="pwa-inzichtAntwoord" value="pwa-inzicht2">
@@ -309,9 +389,10 @@
 		<label for="pwa-inzicht5">Ik kan het zelf schrijven én aan mensen met verschillende levels van kennis
 			uitleggen</label><br>
 
-		<h3>Nog iets te delen?</h3>
-		<textarea>Nee, niet per se...</textarea>
-		<button type="submit">Verstuur alles over dit vak</button>
+		<label for="pwa-overig">
+			<h2>Nog iets te delen? </h2>
+		</label>
+		<textarea id="pwa-overig" name="pwa-overig">Nee, niet per se...</textarea>
 	</fieldset>
 
 	<br><br>
@@ -326,31 +407,50 @@
 			</svg>
 		</legend>
 
-		<h3>Welke docent(en) had je voor dit vak?</h3>
+		<h2>Welke docent(en) had je voor dit vak?</h2>
 
-		<input type="checkbox" id="Robert" name="bt-docent" value="Robert">
-		<label for="Robert">Robert Spier</label><br>
-		<input type="checkbox" id="Peter-Paul" name="bt-docent" value="Peter-Paul">
-		<label for="Peter-Paul">Peter-Paul Koch</label><br>
-		<input type="checkbox" id="anders" name="bt-docent" value="anders">
-		<label for="anders"><textarea>...</textarea></label>
+		<select required name="bt-docent1" id="bt-docent1">
+			<option value="bt-docent1-joost">Joost Faber</option>
+			<option value="bt-docent1-koop"> Koop Reynders</option>
+			<option value="bt-docent1-sanne">Sanne Hooft</option>
+			<option value="bt-docent1-vasilis">Vasilis van Gemert</option>
+			<option value="bt-docent1-justus">Justus Sturkenboom</option>
+			<option value="bt-docent1-declan">Declan Rek</option>
+			<option value="bt-docent1-robert" selected>Robert Spier</option>
+			<option value="bt-docent1-peter-paul">Peter-Paul Koch</option>
+			<option value="bt-docent1-"></option>
+		</select>
+
+		<select required name="bt-docent2" id="bt-docent2">
+			<option value="bt-docent-joost">Joost Faber</option>
+			<option value="bt-docent2-koop"> Koop Reynders</option>
+			<option value="bt-docent2-sanne">Sanne Hooft</option>
+			<option value="bt-docent2-vasilis">Vasilis van Gemert</option>
+			<option value="bt-docent2-justus">Justus Sturkenboom</option>
+			<option value="bt-docent2-declan">Declan Rek</option>
+			<option value="bt-docent2-robert">Robert Spier</option>
+			<option value="bt-docent2-peter-paul" selected>Peter-Paul Koch</option>
+			<option value="bt-docent2-"></option>
+		</select>
 
 		<br>
 
-		<h3>Weken waarin je het vak deed:</h3>
-		<select name="Docent" id="docent">
+		<h2>Weken waarin je het vak deed:</h2>
+		<select required name="bt-week" id="bt-week">
 			<option value="week1-3">Week 1-3</option>
-			<option value="week5-7">Week 5-7</option>
+			<option value="week4"> Week 4</option>
+			<option value="week5-7" selected>Week 5-7</option>
+			<option value="week8"> Week 8</option>
 			<option value="week9-11">Week 9-11</option>
+			<option value="week12">Week 12</option>
 		</select>
 
 		<label for="bt-cijferSchaal">
-			<h3>Wat vond je van de lesstof? (1= makkelijk, 10= moeilijk)</h3>
+			<h2>Wat vond je van de lesstof op een schaal van 1 tot 10? (1= makkelijk, 10= moeilijk)</h2>
 		</label>
+		<input required type="number" id="bt-cijferSchaal" name="bt-cijferSchaal" min="1" max="10">
 
-		<input type="number" id="bt-cijferSchaal" name="bt-cijferSchaal" min="1" max="10">
-
-		<h3>Hoe duidelijk is het uitgelegd?</h3>
+		<h2>Hoe duidelijk is het uitgelegd?</h2>
 		<input type="radio" id="bt-uitlegschaal1" name="bt-uitlegSchaal" value="bt-uitlegschaal1">
 		<label for="bt-uitlegschaal1">Zo goed als geen uitleg gekregen</label><br>
 		<input type="radio" id="bt-uitlegschaal2" name="bt-uitlegSchaal" value="bt-uitlegschaal2">
@@ -366,7 +466,7 @@
 			te
 			ronden</label><br>
 
-		<h3>Eigen inzicht, dus hoe goed snap je het?</h3>
+		<h2>Eigen inzicht, dus hoe goed snap je het?</h2>
 		<input type="radio" id="bt-inzicht1" name="bt-inzichtAntwoord" value="bt-inzicht1">
 		<label for="bt-inzicht1">Ik heb niets onthouden</label><br>
 		<input type="radio" id="bt-inzicht2" name="bt-inzichtAntwoord" value="bt-inzicht2">
@@ -380,9 +480,10 @@
 		<label for="bt-inzicht5">Ik kan het zelf schrijven én aan mensen met verschillende levels van kennis
 			uitleggen</label><br>
 
-		<h3>Nog iets te delen?</h3>
-		<textarea>Nee, niet per se...</textarea>
-		<button type="submit">Verstuur alles over dit vak</button>
+		<label for="bt-overig">
+			<h2>Nog iets te delen? </h2>
+		</label>
+		<textarea id="bt-overig" name="bt-overig">Nee, niet per se...</textarea>
 	</fieldset>
 
 	<br><br>
@@ -397,31 +498,51 @@
 			</svg>
 		</legend>
 
-		<h3>Welke docent(en) had je voor dit vak?</h3>
+		<h2>Welke docent(en) had je voor dit vak?</h2>
 
-		<input type="checkbox" id="Robert" name="project2-docent" value="Robert">
-		<label for="Robert">Robert Spier</label><br>
-		<input type="checkbox" id="Peter-Paul" name="project2-docent" value="Peter-Paul">
-		<label for="Peter-Paul">Peter-Paul Koch</label><br>
-		<input type="checkbox" id="anders" name="project2-docent" value="anders">
-		<label for="anders"><textarea>...</textarea></label>
+
+		<select required name="project2-docent1" id="project2-docent1">
+			<option value="project2-docent1-joost">Joost Faber</option>
+			<option value="project2-docent1-koop"> Koop Reynders</option>
+			<option value="project2-docent1-sanne">Sanne Hooft</option>
+			<option value="project2-docent1-vasilis">Vasilis van Gemert</option>
+			<option value="project2-docent1-justus">Justus Sturkenboom</option>
+			<option value="project2-docent1-declan">Declan Rek</option>
+			<option value="project2-docent1-robert">Robert Spier</option>
+			<option value="project2-docent1-peter-paul">Peter-Paul Koch</option>
+			<option value="project2-docent1-"></option>
+		</select>
+
+		<select name="project2-docent2" id="project2-docent2">
+			<option value="project2-docent-joost">Joost Faber</option>
+			<option value="project2-docent2-koop"> Koop Reynders</option>
+			<option value="project2-docent2-sanne">Sanne Hooft</option>
+			<option value="project2-docent2-vasilis">Vasilis van Gemert</option>
+			<option value="project2-docent2-justus">Justus Sturkenboom</option>
+			<option value="project2-docent2-declan">Declan Rek</option>
+			<option value="project2-docent2-robert">Robert Spier</option>
+			<option value="project2-docent2-peter-paul">Peter-Paul Koch</option>
+			<option value="project2-docent2-"></option>
+		</select>
 
 		<br>
 
-		<h3>Weken waarin je het vak deed:</h3>
-		<select name="Docent" id="docent">
+		<h2>Weken waarin je het vak deed:</h2>
+		<select required name="project2-week" id="project2-week">
 			<option value="week1-3">Week 1-3</option>
+			<option value="week4"> Week 4</option>
 			<option value="week5-7">Week 5-7</option>
+			<option value="week8" selected> Week 8</option>
 			<option value="week9-11">Week 9-11</option>
+			<option value="week12">Week 12</option>
 		</select>
 
 		<label for="project2-cijferSchaal">
-			<h3>Wat vond je van de lesstof? (1= makkelijk, 10= moeilijk)</h3>
+			<h2>Wat vond je van de lesstof op een schaal van 1 tot 10? (1= makkelijk, 10= moeilijk)</h2>
 		</label>
+		<input required type="number" id="project2-cijferSchaal" name="project2-cijferSchaal" min="1" max="10">
 
-		<input type="number" id="project2-cijferSchaal" name="project2-cijferSchaal" min="1" max="10">
-
-		<h3>Hoe duidelijk is het uitgelegd?</h3>
+		<h2>Hoe duidelijk is het uitgelegd?</h2>
 		<input type="radio" id="project2-uitlegschaal1" name="project2-uitlegSchaal" value="project2-uitlegschaal1">
 		<label for="project2-uitlegschaal1">Zo goed als geen uitleg gekregen</label><br>
 		<input type="radio" id="project2-uitlegschaal2" name="project2-uitlegSchaal" value="project2-uitlegschaal2">
@@ -439,7 +560,7 @@
 			te
 			ronden</label><br>
 
-		<h3>Eigen inzicht, dus hoe goed snap je het?</h3>
+		<h2>Eigen inzicht, dus hoe goed snap je het?</h2>
 		<input type="radio" id="project2-inzicht1" name="project2-inzichtAntwoord" value="project2-inzicht1">
 		<label for="project2-inzicht1">Ik heb niets onthouden</label><br>
 		<input type="radio" id="project2-inzicht2" name="project2-inzichtAntwoord" value="project2-inzicht2">
@@ -453,9 +574,10 @@
 		<label for="project2-inzicht5">Ik kan het zelf schrijven én aan mensen met verschillende levels van kennis
 			uitleggen</label><br>
 
-		<h3>Nog iets te delen?</h3>
-		<textarea>Nee, niet per se...</textarea>
-		<button type="submit">Verstuur alles over dit vak</button>
+		<label for="project2-overig">
+			<h2>Nog iets te delen? </h2>
+		</label>
+		<textarea id="project2-overig" name="project2-overig">Nee, niet per se...</textarea>
 	</fieldset>
 
 	<br><br>
@@ -470,31 +592,51 @@
 			</svg>
 		</legend>
 
-		<h3>Welke docent(en) had je voor dit vak?</h3>
+		<h2>Welke docent(en) had je voor dit vak?</h2>
 
-		<input type="checkbox" id="Robert" name="rtw-docent" value="Robert">
-		<label for="Robert">Robert Spier</label><br>
-		<input type="checkbox" id="Peter-Paul" name="rtw-docent" value="Peter-Paul">
-		<label for="Peter-Paul">Peter-Paul Koch</label><br>
-		<input type="checkbox" id="anders" name="rtw-docent" value="anders">
-		<label for="anders"><textarea>...</textarea></label>
+
+		<select required name="rtw-docent1" id="rtw-docent1">
+			<option value="rtw-docent1-joost">Joost Faber</option>
+			<option value="rtw-docent1-koop"> Koop Reynders</option>
+			<option value="rtw-docent1-sanne">Sanne Hooft</option>
+			<option value="rtw-docent1-vasilis">Vasilis van Gemert</option>
+			<option value="rtw-docent1-justus">Justus Sturkenboom</option>
+			<option value="rtw-docent1-declan">Declan Rek</option>
+			<option value="rtw-docent1-robert">Robert Spier</option>
+			<option value="rtw-docent1-peter-paul">Peter-Paul Koch</option>
+			<option value="rtw-docent1-shyanta" selected>Shyanta Vleugel </option>
+		</select>
+
+		<select required name="rtw-docent2" id="rtw-docent2">
+			<option value="rtw-docent-joost">Joost Faber</option>
+			<option value="rtw-docent2-koop"> Koop Reynders</option>
+			<option value="rtw-docent2-sanne">Sanne Hooft</option>
+			<option value="rtw-docent2-vasilis">Vasilis van Gemert</option>
+			<option value="rtw-docent2-justus" selected>Justus Sturkenboom</option>
+			<option value="rtw-docent2-declan">Declan Rek</option>
+			<option value="rtw-docent2-robert">Robert Spier</option>
+			<option value="rtw-docent2-peter-paul">Peter-Paul Koch</option>
+			<option value="rtw-docent2-shyanta"> Shyanta Vleugel</option>
+		</select>
 
 		<br>
 
-		<h3>Weken waarin je het vak deed:</h3>
-		<select name="Docent" id="docent">
+		<h2>Weken waarin je het vak deed:</h2>
+		<select required name="rtb-week" id="rtb-week">
 			<option value="week1-3">Week 1-3</option>
+			<option value="week4"> Week 4</option>
 			<option value="week5-7">Week 5-7</option>
-			<option value="week9-11">Week 9-11</option>
+			<option value="week8"> Week 8</option>
+			<option value="week9-11" selected>Week 9-11</option>
+			<option value="week12">Week 12</option>
 		</select>
 
 		<label for="rtw-cijferSchaal">
-			<h3>Wat vond je van de lesstof? (1= makkelijk, 10= moeilijk)</h3>
+			<h2>Wat vond je van de lesstof op een schaal van 1 tot 10? (1= makkelijk, 10= moeilijk)</h2>
 		</label>
+		<input required type="number" id="rtw-cijferSchaal" name="rtw-cijferSchaal" min="1" max="10">
 
-		<input type="number" id="rtw-cijferSchaal" name="rtw-cijferSchaal" min="1" max="10">
-
-		<h3>Hoe duidelijk is het uitgelegd?</h3>
+		<h2>Hoe duidelijk is het uitgelegd?</h2>
 		<input type="radio" id="rtw-uitlegschaal1" name="rtw-uitlegSchaal" value="rtw-uitlegschaal1">
 		<label for="rtw-uitlegschaal1">Zo goed als geen uitleg gekregen</label><br>
 		<input type="radio" id="rtw-uitlegschaal2" name="rtw-uitlegSchaal" value="rtw-uitlegschaal2">
@@ -510,7 +652,7 @@
 			te
 			ronden</label><br>
 
-		<h3>Eigen inzicht, dus hoe goed snap je het?</h3>
+		<h2>Eigen inzicht, dus hoe goed snap je het?</h2>
 		<input type="radio" id="rtw-inzicht1" name="rtw-inzichtAntwoord" value="rtw-inzicht1">
 		<label for="rtw-inzicht1">Ik heb niets onthouden</label><br>
 		<input type="radio" id="rtw-inzicht2" name="rtw-inzichtAntwoord" value="rtw-inzicht2">
@@ -524,9 +666,10 @@
 		<label for="rtw-inzicht5">Ik kan het zelf schrijven én aan mensen met verschillende levels van kennis
 			uitleggen</label><br>
 
-		<h3>Nog iets te delen?</h3>
-		<textarea>Nee, niet per se...</textarea>
-		<button type="submit">Verstuur alles over dit vak</button>
+		<label for="rtw-overig">
+			<h2>Nog iets te delen? </h2>
+		</label>
+		<textarea id="rtw-overig" name="rtw-overig">Nee, niet per se...</textarea>
 	</fieldset>
 
 	<br><br>
@@ -541,31 +684,51 @@
 			</svg>
 		</legend>
 
-		<h3>Welke docent(en) had je voor dit vak?</h3>
+		<h2>Welke docent(en) had je voor dit vak?</h2>
 
-		<input type="checkbox" id="Robert" name="hcd-docent" value="Robert">
-		<label for="Robert">Robert Spier</label><br>
-		<input type="checkbox" id="Peter-Paul" name="hcd-docent" value="Peter-Paul">
-		<label for="Peter-Paul">Peter-Paul Koch</label><br>
-		<input type="checkbox" id="anders" name="hcd-docent" value="anders">
-		<label for="anders"><textarea>...</textarea></label>
+
+		<select required name="hcd-docent1" id="hcd-docent1">
+			<option value="hcd-docent1-joost">Joost Faber</option>
+			<option value="hcd-docent1-koop"> Koop Reynders</option>
+			<option value="hcd-docent1-sanne">Sanne Hooft</option>
+			<option value="hcd-docent1-vasilis" selected>Vasilis van Gemert</option>
+			<option value="hcd-docent1-justus">Justus Sturkenboom</option>
+			<option value="hcd-docent1-declan">Declan Rek</option>
+			<option value="hcd-docent1-robert">Robert Spier</option>
+			<option value="hcd-docent1-peter-paul">Peter-Paul Koch</option>
+			<option value="hcd-docent1-"></option>
+		</select>
+
+		<select name="hcd-docent2" id="hcd-docent2">
+			<option value="hcd-docent-joost">Joost Faber</option>
+			<option value="hcd-docent2-koop"> Koop Reynders</option>
+			<option value="hcd-docent2-sanne">Sanne Hooft</option>
+			<option value="hcd-docent2-vasilis">Vasilis van Gemert</option>
+			<option value="hcd-docent2-justus">Justus Sturkenboom</option>
+			<option value="hcd-docent2-declan">Declan Rek</option>
+			<option value="hcd-docent2-robert">Robert Spier</option>
+			<option value="hcd-docent2-peter-paul">Peter-Paul Koch</option>
+			<option value="hcd-docent2-"></option>
+		</select>
 
 		<br>
 
-		<h3>Weken waarin je het vak deed:</h3>
-		<select name="Docent" id="docent">
+		<h2>Weken waarin je het vak deed:</h2>
+		<select required name="hcd-week" id="hcd-week">
 			<option value="week1-3">Week 1-3</option>
+			<option value="week4"> Week 4</option>
 			<option value="week5-7">Week 5-7</option>
-			<option value="week9-11">Week 9-11</option>
+			<option value="week8"> Week 8</option>
+			<option value="week9-11" selected>Week 9-11</option>
+			<option value="week12">Week 12</option>
 		</select>
 
 		<label for="hcd-cijferSchaal">
-			<h3>Wat vond je van de lesstof? (1= makkelijk, 10= moeilijk)</h3>
+			<h2>Wat vond je van de lesstof op een schaal van 1 tot 10? (1= makkelijk, 10= moeilijk)</h2>
 		</label>
+		<input required type="number" id="hcd-cijferSchaal" name="hcd-cijferSchaal" min="1" max="10">
 
-		<input type="number" id="hcd-cijferSchaal" name="hcd-cijferSchaal" min="1" max="10">
-
-		<h3>Hoe duidelijk is het uitgelegd?</h3>
+		<h2>Hoe duidelijk is het uitgelegd?</h2>
 		<input type="radio" id="hcd-uitlegschaal1" name="hcd-uitlegSchaal" value="hcd-uitlegschaal1">
 		<label for="hcd-uitlegschaal1">Zo goed als geen uitleg gekregen</label><br>
 		<input type="radio" id="hcd-uitlegschaal2" name="hcd-uitlegSchaal" value="hcd-uitlegschaal2">
@@ -581,7 +744,7 @@
 			te
 			ronden</label><br>
 
-		<h3>Eigen inzicht, dus hoe goed snap je het?</h3>
+		<h2>Eigen inzicht, dus hoe goed snap je het?</h2>
 		<input type="radio" id="hcd-inzicht1" name="hcd-inzichtAntwoord" value="hcd-inzicht1">
 		<label for="hcd-inzicht1">Ik heb niets onthouden</label><br>
 		<input type="radio" id="hcd-inzicht2" name="hcd-inzichtAntwoord" value="hcd-inzicht2">
@@ -595,9 +758,10 @@
 		<label for="hcd-inzicht5">Ik kan het zelf schrijven én aan mensen met verschillende levels van kennis
 			uitleggen</label><br>
 
-		<h3>Nog iets te delen?</h3>
-		<textarea>Nee, niet per se...</textarea>
-		<button type="submit">Verstuur alles over dit vak</button>
+		<label for="hcd-overig">
+			<h2>Nog iets te delen? </h2>
+		</label>
+		<textarea id="hcd-overig" name="hcd-overig">Nee, niet per se...</textarea>
 	</fieldset>
 
 	<br><br>
@@ -612,31 +776,50 @@
 			</svg>
 		</legend>
 
-		<h3>Welke docent(en) had je voor dit vak?</h3>
+		<h2>Welke docent(en) had je voor dit vak?</h2>
 
-		<input type="checkbox" id="Robert" name="wn-docent" value="Robert">
-		<label for="Robert">Robert Spier</label><br>
-		<input type="checkbox" id="Peter-Paul" name="wn-docent" value="Peter-Paul">
-		<label for="Peter-Paul">Peter-Paul Koch</label><br>
-		<input type="checkbox" id="anders" name="wn-docent" value="anders">
-		<label for="anders"><textarea>...</textarea></label>
+		<select name="wn-docent1" id="wn-docent1">
+			<option value="wn-docent1-joost">Joost Faber</option>
+			<option value="wn-docent1-koop"> Koop Reynders</option>
+			<option value="wn-docent1-sanne">Sanne Hooft</option>
+			<option value="wn-docent1-vasilis" selected>Vasilis van Gemert</option>
+			<option value="wn-docent1-justus">Justus Sturkenboom</option>
+			<option value="wn-docent1-declan">Declan Rek</option>
+			<option value="wn-docent1-robert">Robert Spier</option>
+			<option value="wn-docent1-peter-paul">Peter-Paul Koch</option>
+			<option value="wn-docent1-"></option>
+		</select>
 
+		<select name="wn-docent2" id="wn-docent2">
+			<option value="wn-docent-joost">Joost Faber</option>
+			<option value="wn-docent2-koop"> Koop Reynders</option>
+			<option value="wn-docent2-sanne">Sanne Hooft</option>
+			<option value="wn-docent2-vasilis">Vasilis van Gemert</option>
+			<option value="wn-docent2-justus">Justus Sturkenboom</option>
+			<option value="wn-docent2-declan">Declan Rek</option>
+			<option value="wn-docent2-robert">Robert Spier</option>
+			<option value="wn-docent2-peter-paul">Peter-Paul Koch</option>
+			<option value="wn-docent2-"></option>
+		</select>
 		<br>
 
-		<h3>Weken waarin je het vak deed:</h3>
-		<select name="Docent" id="docent">
+		<h2>Weken waarin je het vak deed:</h2>
+		<select required name="wn-week" id="wn-week">
 			<option value="week1-3">Week 1-3</option>
+			<option value="week4"> Week 4</option>
 			<option value="week5-7">Week 5-7</option>
+			<option value="week8"> Week 8</option>
 			<option value="week9-11">Week 9-11</option>
+			<option value="week12">Week 12</option>
+			<option value="bijna-iedere-week" selected>Bijna iedere week</option>
 		</select>
 
 		<label for="wn-cijferSchaal">
-			<h3>Wat vond je van de lesstof? (1= makkelijk, 10= moeilijk)</h3>
+			<h2>Wat vond je van de lesstof op een schaal van 1 tot 10? (1= makkelijk, 10= moeilijk)</h2>
 		</label>
+		<input required type="number" id="wn-cijferSchaal" name="wn-cijferSchaal" min="1" max="10">
 
-		<input type="number" id="wn-cijferSchaal" name="wn-cijferSchaal" min="1" max="10">
-
-		<h3>Hoe duidelijk is het uitgelegd?</h3>
+		<h2>Hoe duidelijk is het uitgelegd?</h2>
 		<input type="radio" id="wn-uitlegschaal1" name="wn-uitlegSchaal" value="wn-uitlegschaal1">
 		<label for="wn-uitlegschaal1">Zo goed als geen uitleg gekregen</label><br>
 		<input type="radio" id="wn-uitlegschaal2" name="wn-uitlegSchaal" value="wn-uitlegschaal2">
@@ -652,7 +835,7 @@
 			te
 			ronden</label><br>
 
-		<h3>Eigen inzicht, dus hoe goed snap je het?</h3>
+		<h2>Eigen inzicht, dus hoe goed snap je het?</h2>
 		<input type="radio" id="wn-inzicht1" name="wn-inzichtAntwoord" value="wn-inzicht1">
 		<label for="wn-inzicht1">Ik heb niets onthouden</label><br>
 		<input type="radio" id="wn-inzicht2" name="wn-inzichtAntwoord" value="wn-inzicht2">
@@ -666,9 +849,10 @@
 		<label for="wn-inzicht5">Ik kan het zelf schrijven én aan mensen met verschillende levels van kennis
 			uitleggen</label><br>
 
-		<h3>Nog iets te delen?</h3>
-		<textarea>Nee, niet per se...</textarea>
-		<button type="submit">Verstuur alles over dit vak</button>
+		<label for="wn-overig">
+			<h2>Nog iets te delen? </h2>
+		</label>
+		<textarea id="wn-overig" name="wn-overig">Nee, niet per se...</textarea>
 	</fieldset>
 
 	<br><br>
@@ -683,31 +867,50 @@
 			</svg>
 		</legend>
 
-		<h3>Welke docent(en) had je voor dit vak?</h3>
+		<h2>Welke docent(en) had je voor dit vak?</h2>
 
-		<input type="checkbox" id="Robert" name="meesterproef-docent" value="Robert">
-		<label for="Robert">Robert Spier</label><br>
-		<input type="checkbox" id="Peter-Paul" name="meesterproef-docent" value="Peter-Paul">
-		<label for="Peter-Paul">Peter-Paul Koch</label><br>
-		<input type="checkbox" id="anders" name="meesterproef-docent" value="anders">
-		<label for="anders"><textarea>...</textarea></label>
+		<select required name="meesterproef-docent1" id="meesterproef-docent1">
+			<option value="meesterproef-docent1-joost">Joost Faber</option>
+			<option value="meesterproef-docent1-koop"> Koop Reynders</option>
+			<option value="meesterproef-docent1-sanne">Sanne Hooft</option>
+			<option value="meesterproef-docent1-vasilis">Vasilis van Gemert</option>
+			<option value="meesterproef-docent1-justus">Justus Sturkenboom</option>
+			<option value="meesterproef-docent1-declan">Declan Rek</option>
+			<option value="meesterproef-docent1-robert">Robert Spier</option>
+			<option value="meesterproef-docent1-peter-paul">Peter-Paul Koch</option>
+			<option value="meesterproef-docent1-"></option>
+		</select>
+
+		<select required name="meesterproef-docent2" id="meesterproef-docent2">
+			<option value="meesterproef-docent-joost">Joost Faber</option>
+			<option value="meesterproef-docent2-koop"> Koop Reynders</option>
+			<option value="meesterproef-docent2-sanne">Sanne Hooft</option>
+			<option value="meesterproef-docent2-vasilis">Vasilis van Gemert</option>
+			<option value="meesterproef-docent2-justus">Justus Sturkenboom</option>
+			<option value="meesterproef-docent2-declan">Declan Rek</option>
+			<option value="meesterproef-docent2-robert">Robert Spier</option>
+			<option value="meesterproef-docent2-peter-paul">Peter-Paul Koch</option>
+			<option value="meesterproef-docent2-"></option>
+		</select>
 
 		<br>
 
-		<h3>Weken waarin je het vak deed:</h3>
-		<select name="Docent" id="docent">
+		<h2>Weken waarin je het vak deed:</h2>
+		<select required name="meesterproef-week" id="meesterproef-week">
 			<option value="week1-3">Week 1-3</option>
+			<option value="week4"> Week 4</option>
 			<option value="week5-7">Week 5-7</option>
+			<option value="week8"> Week 8</option>
 			<option value="week9-11">Week 9-11</option>
+			<option value="week12" selected>Week 12</option>
 		</select>
 
 		<label for="meesterproef-cijferSchaal">
-			<h3>Wat vond je van de lesstof? (1= makkelijk, 10= moeilijk)</h3>
+			<h2>Wat vond je van de lesstof op een schaal van 1 tot 10? (1= makkelijk, 10= moeilijk)</h2>
 		</label>
+		<input required type="number" id="meesterproef-cijferSchaal" name="meesterproef-cijferSchaal" min="1" max="10">
 
-		<input type="number" id="meesterproef-cijferSchaal" name="meesterproef-cijferSchaal" min="1" max="10">
-
-		<h3>Hoe duidelijk is het uitgelegd?</h3>
+		<h2>Hoe duidelijk is het uitgelegd?</h2>
 		<input type="radio" id="meesterproef-uitlegschaal1" name="meesterproef-uitlegSchaal"
 			value="meesterproef-uitlegschaal1">
 		<label for="meesterproef-uitlegschaal1">Zo goed als geen uitleg gekregen</label><br>
@@ -730,7 +933,7 @@
 			te
 			ronden</label><br>
 
-		<h3>Eigen inzicht, dus hoe goed snap je het?</h3>
+		<h2>Eigen inzicht, dus hoe goed snap je het?</h2>
 		<input type="radio" id="meesterproef-inzicht1" name="meesterproef-inzichtAntwoord"
 			value="meesterproef-inzicht1">
 		<label for="meesterproef-inzicht1">Ik heb niets onthouden</label><br>
@@ -749,13 +952,13 @@
 		<label for="meesterproef-inzicht5">Ik kan het zelf schrijven én aan mensen met verschillende levels van kennis
 			uitleggen</label><br>
 
-		<h3>Nog iets te delen?</h3>
-		<textarea>Nee, niet per se...</textarea>
-		<button type="submit">Verstuur alles over dit vak</button>
+		<label for="meesterproef-overig">
+			<h2>Nog iets te delen? </h2>
+		</label>
+		<textarea id="meesterproef-overig" name="meesterproef-overig">Nee, niet per se...</textarea>
 	</fieldset>
 
 	<br><br>
 	<input class="button" type="submit" value="Versturen">
-	<input class="button" type="reset">
 	{{!-- <button type="submit" form="form" value="verstuurEnquete">Verstuur hele enquête</button> --}}
 </form>

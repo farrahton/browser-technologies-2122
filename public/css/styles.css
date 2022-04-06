@@ -70,9 +70,6 @@ select {
     text-align: center;
     cursor: pointer;
 }
-input [type="text"] {
-    background-color: white ;
-} 
 
 input[type="number"] {
     border: solid transparent;
@@ -85,6 +82,19 @@ input[type="number"] {
 /* zodat je in chrome de omhoog en omlaag pijltjes altijd in beeld zit en niet alleen met een mouse over */
 input[type="number"]::-webkit-inner-spin-button {
     opacity: 1;
+}
+
+
+input[type="text"] {
+    margin: 1em;
+}
+
+div {
+    display: block
+}
+
+input[type="radio"] {
+    cursor: pointer;
 }
 
 textarea {

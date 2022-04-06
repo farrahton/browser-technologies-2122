@@ -245,9 +245,13 @@ Er zitten alleen een hoop haken en ogen aan Browser sniffing:
 
 
 ## Core functionality 
-
+Give answers to questions in a survey and submit them with the action and post attributes. This is the first layer, just HTML and just the core functionalities.
 
 ## Functional/reliable, usable en pleasurable layers
+To make it more reliable you give feedback to the user when they have submitted their answers. Giving them the confirmation that everything went alright. 
+
+If i'm going to be honest, most regular internet users wouldn't trust the styling that's used with only an HTML file. Just because it's boring and so old-looking, which in their eyes could mean it's outdated so no thank you to that experience. With the use of CSS we make the website look more reliable. Just pointer cursors can already change the perspective of the user and make them want to click on things, because it looks familiar and indicates usability. It also makes things like the number input more functional since it now shows the up and down arrows.
+
 
 
 ## Princples of Progressive Enhancement and how i applied them
@@ -272,7 +276,15 @@ https://farrahton-browser-technologies.herokuapp.com/
 ## Een beschrijving van de feature(s)/Browser Technologies die in je demo zijn gebruikt en hoe je dit PE hebt toegepast
 
 
+## Core functionality 
+Give answers to questions in a survey and submit them with the action and post attributes. This is the first layer, just HTML and just the core functionalities.
 
+## Functional/reliable, usable en pleasurable layers
+To make it more reliable you give feedback to the user when they have submitted their answers. Giving them the confirmation that everything went alright. 
+
+If i'm going to be honest, most regular internet users wouldn't trust the styling that's used with only an HTML file. Just because it's boring and so old-looking, which in their eyes could mean it's outdated so no thank you to that experience. With the use of CSS we make the website look more reliable. Just pointer cursors can already change the perspective of the user and make them want to click on things, because it looks familiar and indicates usability. It also makes things like the number input more functional since it now shows the up and down arrows.
+
+The most pleasurable layer would be with animations and a way to make the form look shorter to the user. With the use of a multistepform I wanted to achieve that. Which for the most part is a success. I only need to change the transform: scale(0) to transform: scale(1) from the keyfram fade when javascript is disabled or the other way arounf (turn it on when it's enabled). According to articles i could use a class on the body with .-no.js and add that to the selector too, but since the things feel opposite in my head (i'm brain dead currently) it's not clicking how to do just that. So let's pretend I have fixed that by just changing it manually, and wow yay it's working!! How great is this life again, I'm for sure enjoying it more now!
 
 ## Een lijst met vier browsers waarin je hebt getest:
 	- voor de desktop 1 Chromium 1 niet-Chromium browser
@@ -280,6 +292,7 @@ https://farrahton-browser-technologies.herokuapp.com/
 
     -> Firefox
 	- voor mobiel 1 iOS + 1 Android OF een Samsung- en een niet-Samsung Android)
+
     -> iPhone 8 Plus
 
     -> Moto e(6i)
@@ -290,9 +303,15 @@ https://farrahton-browser-technologies.herokuapp.com/
 
 On a few browsers like the one on the Lumia 620 linear gradient isn't supported. Since I still want the colors as the background I put an image with it as a background-image and an @support linear gradient for browser that do support it. 
 
-
-
 I wanted to progressively enhance the user experience for people with JavaScript turned on. For them the survey is going to feel a bit shorter (more pleasurable), with the use of a previous and next button and splitting the survey even more into seperate subjects. 
+
+### Accessibility testing
+
+- In the dev tools I emulated forced color active. At first you couldn't see any border around the inputs. By using a solid-transparent border it didn't affect the look I wanted without a border and it now shows a good contrasting border for people that have that turned on.
+- Added understandable labels and aria-labels when needed.
+- Sufficient contrast ratio for background and foreground colors 
+- Even with the vision deficiencies emulations the page still has good contrasting colors
+- Heading elements appear in a sequentially-descending order
 
 
 ### welke browsers de feature(s) wel/niet ondersteunen
@@ -306,13 +325,12 @@ I wanted to progressively enhance the user experience for people with JavaScript
       • The input types and their default styling, think of the down arrow for a drop down menu. Since hover doesn’t work and tabbing is different from other browsers it could be difficult for the user to understand that they can select an option.
       • required/selected/checked
 
-  #### iOS
-  
+  #### Chrome
+  Chrome was kinda lame, because it didn't show the up and down arrows for the number input. So to fix that i had to change the opacity to 1 with the selector: <code>::-webkit-inner-spin-button</code> and there you go it's showing and doing the one job they had.
 
 	- welke functionaliteiten zoals JavaScript je aan en uit hebt gezet in de tests
+When disabling CSS all the fieldsets are still organized and have space in between to make it a bette
 
-
-	- <del>een screenreader test</del> (dit gaan we bij het volgende vak Human Centred Design doen)
 
 
 

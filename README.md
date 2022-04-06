@@ -269,12 +269,28 @@ Er zitten alleen een hoop haken en ogen aan Browser sniffing:
 
 ## Een lijst met vier browsers waarin je hebt getest:
 	- voor de desktop 1 Chromium 1 niet-Chromium browser
+    = 
 	- voor mobiel 1 iOS + 1 Android OF een Samsung- en een niet-Samsung Android)
+    -> iPhone 8 Plus
+
+    -> Moto
 
   
 ##  een testverslag met
 	- een beschrijving van de feature-lijst die zijn onderzocht
-	- welke browsers de feature(s) wel/niet ondersteunen
+
+### welke browsers de feature(s) wel/niet ondersteunen
+  #### Flow
+      Things that flow does not support
+      • Things that have to do with a mouseover in CSS, for example:
+        ◦ :hover 
+        ◦ cursor: pointer
+        ◦ :focus
+      • @supports 
+      • The input types and their default styling, think of the down arrow for a drop down menu. Since hover doesn’t work and tabbing is different from other browsers it could be difficult for the user to understand that they can select an option.
+      • required/selected/checked
+
+
 	- welke functionaliteiten zoals JavaScript je aan en uit hebt gezet in de tests
 	- <del>een screenreader test</del> (dit gaan we bij het volgende vak Human Centred Design doen)
 

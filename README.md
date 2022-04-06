@@ -271,6 +271,7 @@ https://farrahton-browser-technologies.herokuapp.com/
 
 ## Een (wireflow) schets van de functionaliteit met een beschrijving van de core functionality. Geef ook aan wat de functional/reliable, usable en pleasurable laag.
 
+![breakdownSchets](https://user-images.githubusercontent.com/92303930/162079115-724a67e5-cfc4-4854-95bb-75cacca8d162.jpeg)
 
 
 ## Een beschrijving van de feature(s)/Browser Technologies die in je demo zijn gebruikt en hoe je dit PE hebt toegepast
@@ -307,7 +308,7 @@ I wanted to progressively enhance the user experience for people with JavaScript
 
 ### Accessibility testing
 
-- In the dev tools I emulated forced color active. At first you couldn't see any border around the inputs. By using a solid-transparent border it didn't affect the look I wanted without a border and it now shows a good contrasting border for people that have that turned on.
+- <details> <summary> In the dev tools I emulated forced color active. At first you couldn't see any border around the inputs. By using a solid-transparent border it didn't affect the look I wanted without a border and it now shows a good contrasting border for people that have that turned on.</summary><img width="1280" alt="emulation forced color" src="https://user-images.githubusercontent.com/92303930/162079151-73998f76-01ac-4328-b5ce-13be8f0a50a6.png"></details> 
 - Added understandable labels and aria-labels when needed.
 - Sufficient contrast ratio for background and foreground colors 
 - Even with the vision deficiencies emulations the page still has good contrasting colors

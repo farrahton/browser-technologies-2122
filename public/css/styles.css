@@ -47,7 +47,8 @@ fieldset {
 legend {
     /* color: #3AAA34; */
     color: black;
-    font-size:x-large
+    font-size:x-large;  
+    text-align: center;
 }
 
 .button {
@@ -99,5 +100,6 @@ textarea {
     cursor: pointer;
 }
 
-
-
+strong { 
+    text-align: center;
+}

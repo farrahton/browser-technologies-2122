@@ -48,7 +48,7 @@ legend {
     /* color: #3AAA34; */
     color: black;
     font-size:x-large;  
-    text-align: center;
+    margin: 1em;
 }
 
 .button {

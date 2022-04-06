@@ -263,25 +263,41 @@ Er zitten alleen een hoop haken en ogen aan Browser sniffing:
 
 ## Een link naar de demo.
 
+https://farrahton-browser-technologies.herokuapp.com/ 
+
 ## Een (wireflow) schets van de functionaliteit met een beschrijving van de core functionality. Geef ook aan wat de functional/reliable, usable en pleasurable laag.
+
+
 
 ## Een beschrijving van de feature(s)/Browser Technologies die in je demo zijn gebruikt en hoe je dit PE hebt toegepast
 
+
+
+
 ## Een lijst met vier browsers waarin je hebt getest:
 	- voor de desktop 1 Chromium 1 niet-Chromium browser
-    = 
+    ->Chrome
+
+    -> Firefox
 	- voor mobiel 1 iOS + 1 Android OF een Samsung- en een niet-Samsung Android)
     -> iPhone 8 Plus
 
-    -> Moto
+    -> Moto e(6i)
 
-  
+
 ##  een testverslag met
 	- een beschrijving van de feature-lijst die zijn onderzocht
 
+On a few browsers like the one on the Lumia 620 linear gradient isn't supported. Since I still want the colors as the background I put an image with it as a background-image and an @support linear gradient for browser that do support it. 
+
+
+
+I wanted to progressively enhance the user experience for people with JavaScript turned on. For them the survey is going to feel a bit shorter (more pleasurable), with the use of a previous and next button and splitting the survey even more into seperate subjects. 
+
+
 ### welke browsers de feature(s) wel/niet ondersteunen
   #### Flow
-      Things that flow does not support
+  Things that flow does not support
       • Things that have to do with a mouseover in CSS, for example:
         ◦ :hover 
         ◦ cursor: pointer
@@ -290,8 +306,12 @@ Er zitten alleen een hoop haken en ogen aan Browser sniffing:
       • The input types and their default styling, think of the down arrow for a drop down menu. Since hover doesn’t work and tabbing is different from other browsers it could be difficult for the user to understand that they can select an option.
       • required/selected/checked
 
+  #### iOS
+  
 
 	- welke functionaliteiten zoals JavaScript je aan en uit hebt gezet in de tests
+
+
 	- <del>een screenreader test</del> (dit gaan we bij het volgende vak Human Centred Design doen)
 
 

@@ -1,27 +1,3 @@
-// input select en textarea zijn belangrijk
-// let form = document... ('form') staat voor alle elementen in de formulier var kan ook met let 
-// var form = document.querySelector('form')
-// var form = document.forms
-// for (var el in form.elements) {
-
-// }
-
-
-// document.images 
-// document.forms
-// document.forms[0].elements
-// document.links dit waren vroeger het enige wat je kon gebruiken links kon je alleen uitlzen niet vervangen (denkt ppk) 
-
-// document.querySelectorAll('input, select, textarea') werkt alleen in nieuwere versies 
-
-// const card = document.querySelector('card')
-// // card.classList.add('cardAnimation')
-// card.style.display = "none";
-// document.getElementsByClassName('card').classList.add('active');
-
-// document.getElementsByClassName('card').style.display = "none";
-
-
 const multiStepForm = document.querySelector("[data-multi-step")
 const formSteps = [...multiStepForm.querySelectorAll("[data-step]")]
 const formButtons = [...multiStepForm.querySelectorAll("button")]
@@ -33,11 +9,12 @@ formSteps.forEach(element => {
     element.classList.add('is-default-hidden');
 })
 
+// a loop to remove the classlist with display:none, because with this PE we do want to see the buttons
 formButtons.forEach(element => {
     element.classList.remove('pe-buttons');
 })
 
-// check the array to give the classlist to the one that's active and make that one have display: block
+// executes 'step' once for every index in the array until it finds the one that returns a value that's true and adds the classlist to make it show
 let currentStep = formSteps.findIndex(step => {
     return step.classList.add("active")
 })
@@ -47,9 +24,10 @@ if (currentStep < 0) {
     showCurrentStep()
 }
 
-// incrementor is used for the validation of required input types. the click eventListener is used so the button works and makes it go to the next array
 multiStepForm.addEventListener("click", e => {
     let incrementor
+    // the click eventListener is used so the button works and makes it go to the next array
+    // if you click the button put the incrementor to 1 
     if (e.target.matches("[data-next]")) {
         incrementor = 1
     } else if (e.target.matches("[data-previous]")) {
@@ -57,7 +35,7 @@ multiStepForm.addEventListener("click", e => {
     }
 
     if (incrementor == null) return
-
+    // checks if all inputs are filled in, because only then it will add a step and make the next array active
     const inputs = [...formSteps[currentStep].querySelectorAll("input")]
     const allValid = inputs.every(input => input.reportValidity())
     if (allValid) {
@@ -75,6 +53,7 @@ formButtons.forEach(btn => {
 
 function showCurrentStep() {
     formSteps.forEach((step, index) => {
+        // add the active class if our index is equal to the currentstep
         step.classList.toggle("active", index === currentStep)
     })
 }

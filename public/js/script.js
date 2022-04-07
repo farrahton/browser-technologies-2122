@@ -24,12 +24,17 @@
 
 const multiStepForm = document.querySelector("[data-multi-step")
 const formSteps = [...multiStepForm.querySelectorAll("[data-step]")]
+const formButtons = [...multiStepForm.querySelectorAll("button")]
 
 console.log(formSteps);
 
 // a loop so every fieldset is displayed underneath each other when javascript is disabled as opposed to having display:none
 formSteps.forEach(element => {
     element.classList.add('is-default-hidden');
+})
+
+formButtons.forEach(element => {
+    element.classList.remove('pe-buttons');
 })
 
 // check the array to give the classlist to the one that's active and make that one have display: block

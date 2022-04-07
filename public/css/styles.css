@@ -18,8 +18,9 @@ html {
  }
 
 h1 {
-    color: black ;
+    color: white ;
     text-align: center;
+    font-size:xx-large;
 }
 
 .multi-step-form {
@@ -53,7 +54,7 @@ h1 {
 legend {
     /* color: #3AAA34; */
     color: black ;
-    font-size:x-large;  
+    font-size: large;  
     margin-left: 1em;
     width: 100%
 }
@@ -104,7 +105,7 @@ textarea {
     cursor: pointer;
 }
 
-button {
+button, input[type="submit"] {
     background: #1899D6;
     border: solid transparent;
     border-radius: 1em;
@@ -121,10 +122,13 @@ button {
     width: 10em;
 }
 
-button {
+button, input[type="submit"] {
     filter: brightness(1.1);
 }
-   
+
+.pe-buttons {
+    display:none;
+}
  
     /* saw something about using a no-js class on the body and adding that to selectors and removing it when js is enabled? thats what i wanna do or find another way to change the transform of the keyframes based on of js is on or off */
   /* .no-js .showEverything {

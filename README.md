@@ -240,8 +240,15 @@ Er zitten alleen een hoop haken en ogen aan Browser sniffing:
 
 # Eindopdracht ✨ Progressive Enhanced Browser Technologie
 
+- [Eindopdracht](#team-dikdik)
+  - [Demo link](#Demo-link)
+  - [Wireflow](#WireFlow)
+  - [Functional/reliable, usable en pleasurable layers](#Functional/reliable-,usable-en-pleasurable-layers)
+  - [Een lijst met vier browsers waarin je hebt getest:](#Features) 
+  - [Accessibility testing](#Accessibility-testing)
+  - [Which browser do and do not support the features](#Which-browser-do-and-do-not-support-the-features)
 
-# Een link naar de demo.
+# Demo link
 
 https://farrahton-browser-technologies.herokuapp.com/ 
 
@@ -293,7 +300,7 @@ Everything works according to plan, with JavaScript as well as when I disable Ja
 
 * On the Nexus it's tricky with the @supports, because there are moments it goes for the linear-gradient and there are moments where it chooses the <code>background-image: url()</code> like older browsers that do not support <code> background: linear gradient </code> do. 
 
-#  Features
+# Features
 
 On a few browsers like the one on the Lumia 620 linear gradient isn't supported. Since I still want the colors as the background I put an image with it as a background-image and an @support linear gradient for browser that do support it. 
 

@@ -2,7 +2,7 @@
 
 - [Opdracht 1 🛹 NPM install Progressive- enhancement](#Opdracht-1-🛹-NPM-install-Progressive-enhancement)
 - [Opdracht 2 💔 Breek het Web](#Opdracht-2-💔-Breek-het-Web)
-- [Eindopdracht ✨ Progressive Enhanced Browser Technologie](#Eindopdracht-✨-Progressive-Enhanced-Browser-Technologie)
+- [Eindopdracht](#Eindopdracht)
 
 # Opdracht 1 🛹 NPM install Progressive- enhancement
 
@@ -242,7 +242,7 @@ Er zitten alleen een hoop haken en ogen aan Browser sniffing:
 [https://dev.opera.com/blog/perils-browser-sniffing/](https://dev.opera.com/blog/perils-browser-sniffing/)
 
 
-# Eindopdracht ✨ Progressive Enhanced Browser Technologie
+# Eindopdracht
 
 - [Eindopdracht](#team-dikdik)
   - [Demo link](#Demo-link)

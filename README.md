@@ -9,7 +9,7 @@ https://roel2407.github.io/Browser-tech-team1/
 ### Team Dikdik
 ![image](https://user-images.githubusercontent.com/92303930/160085087-208e595d-8d71-4c88-97f5-8ec0d5184cb5.png)
 
-### Inhoudsopgave
+### Inhoudsopgave Opdracht 2 
 - [Team Dikdik](#team-dikdik)
   - [Inhoudsopgave](#inhoudsopgave)
   - [Opdracht 2](#opdracht-2)
@@ -24,10 +24,10 @@ https://roel2407.github.io/Browser-tech-team1/
     - [B. Ad blockers (door Jorn)](#b-ad-blockers-door-jorn)
     - [C. Browser detect (door Jorn)](#c-browser-detect-door-jorn)
 
-## Opdracht 2
+### Opdracht 2
 De website die wij hebben onderzocht is https://www.vegan-store.eu.
 
-### 1. Afbeeldingen (door Farrahton)
+#### 1. Afbeeldingen (door Farrahton)
 In Chrome ga je naar preferences -> security & settings -> site setting -> content -> images 
 
 Nu de foto's eenmaal uit staan, ziet de website er als volgt uit. Opvallend is dat de productafbeeldingen lazy worden geload en een styling hebben die de 'placeholder' voor een ongevonden foto wazig maakt. De foto bovenin de navigatiebalk heeft wel de 'placeholder'. 
@@ -36,7 +36,7 @@ Nu de foto's eenmaal uit staan, ziet de website er als volgt uit. Opvallend is d
 Hieruit kunnen we opmerken dat ze geen ALT-tekst hebben toegevoegd, terwijl ze wel een alt tag hebben. 
 <img width="1228" alt="altTag" src="https://user-images.githubusercontent.com/92303930/159916367-9c604698-26d9-4a7e-ba7d-0434d017498b.png">
 
-### 2. Custom fonts (door Marloes)
+#### 2. Custom fonts (door Marloes)
 Het probleem met custom fonts zijn dat deze soms niet geladen worden of dat de gebruiker ervoor kiest om deze niet te gebruiken.
 Via uBlock origin, dit is een adblocker die ook extra functionaliteiten heeft zoals het uitzetten van JavaScript of grote media bloken te blokkeren. via uBlock origin kan je externe lettertypes blokkeren, de website veranderd verder niet dus ze maken geen gebruik van externe letertypes. Een optie om dit op te lossen zou zijn om altijd een fallback font te gebruiken die de meeste browsers kent.
 
@@ -50,7 +50,7 @@ Erna
 
 <img width="250" alt="Zonder iconen" src="https://user-images.githubusercontent.com/24413936/159945896-84ad259b-9c74-43db-930d-2093410ff88d.png">
 
-### 3. Kleur & kleurenblindheid (door Marloes)
+#### 3. Kleur & kleurenblindheid (door Marloes)
 Via de instellingen van je Mac kan je kiezen voor grijswaarden om zo geen kleuren te zien, de website is al erg zwart wit en hierdoor is deze zonder kleur ook prima te gebruiken.
 
 <img width="720" alt="Zwart wit website" src="https://user-images.githubusercontent.com/24413936/159946373-b5fad3b0-630d-4e0e-a178-8166e13a3420.png">
@@ -76,7 +76,7 @@ De roze accenten veranderen wel van kleur maar de iconen blijven leesbaar.
 <img width="720" alt="Kleurenblind" src="https://user-images.githubusercontent.com/24413936/159946771-86285012-22b5-476e-8add-3ac5637ccdfa.png">
 
 
-### 4. Muis/trackpad (door Roel)
+#### 4. Muis/trackpad (door Roel)
 Bij mensen die geen muis of trackpad kunnen gebruiken kan je denken aan mensen met cognitieve problemen, fysieke problemen en mensen met problemen met de zintuigen. 
 Hierbij kan je bijvoorbeeld denken aan blinde mensen.
 
@@ -89,7 +89,7 @@ Je zou dit laatste probleem kunnen oplossen door de links binnen de form in de H
 
 Hulpbron: [https://www.abilitynet.org.uk/factsheets/keyboard-and-mouse-alternatives-and-adaptations](https://www.abilitynet.org.uk/factsheets/keyboard-and-mouse-alternatives-and-adaptations)
 
-### 5. Breedband internet uitzetten (door Roel)
+#### 5. Breedband internet uitzetten (door Roel)
 Door middel van throttling binnen de chrome browser heb ik getest hoe de ervaring is op een langzame 3g verbinding.
 
 Dit kan je doen door de volgende stappen te volgen:
@@ -103,7 +103,7 @@ In mijn ogen zijn zullen de verschillen tussen landen zonder (100%) 4G en tijdel
 
 <img src="https://user-images.githubusercontent.com/90243819/159915105-53e3f3fc-0e94-4d3c-bc76-c08a21c06b90.png">
 
-### 6. JavaScript (door Farrahton)
+#### 6. JavaScript (door Farrahton)
 
 In Chrome ga je naar preferences -> security & settings -> site setting -> content -> JavaScript
 
@@ -156,7 +156,7 @@ Nadelen van uitschakelen
 * Minder wendbaarheid: JavaScript vernieuwt websites en zoekopdrachten altijd om het gemakkelijker te maken om door de informatie te bladeren. Als het eenmaal is uitgeschakeld, moet je door tonnen "Volgende" -links bladeren om afbeeldingen of inhoud te zien.
 
 
-### 7. Cookies (door Lisanne)
+#### 7. Cookies (door Lisanne)
 Op de voorpagina komt er een pop-up in beeld, die met cookies in één klik te verbergen is. Zonder cookies blijft de pop-up een keer of vijf terugkomen, voordat het verdwijnt. Als de pagina herladen wordt, verschijnt de pop-up weer, evenals de "Visiting from outside Europe?" pop-up.
 
 ![](https://user-images.githubusercontent.com/90243819/159908306-3bb654cf-a9d1-4882-9be3-4f2b2d0437aa.png)
@@ -169,14 +169,14 @@ Na het aanzetten van de cookies en het inloggen op de website, zijn de onderstaa
 
 ![](https://user-images.githubusercontent.com/90243819/159912493-5ca97dcc-363c-4cbd-ac98-18e32aa4723c.png)
 
-### 8. localStorage (door Lisanne)
+#### 8. localStorage (door Lisanne)
 Omdat localStorage alleen uitgeschakeld kan worden samen met de cookies, is het niet mogelijk om erachter te komen wat er zou gebeuren als enkel de localStorage uitstaat. Het pop-up probleem lijkt enkel te liggen aan de cookies, omdat er in de localStorage geen data staat die hier invloed op zou kunnen hebben. Het niet kunnen inloggen zou hier wel te maken mee kunnen hebben, omdat mijn e-mailadres in de key "swym-authn" staat.
 
 ![](https://user-images.githubusercontent.com/90243819/159914159-7d35bd9a-7907-4abe-9a6a-4e0dbfee50c6.png)
 
 
 
-### B. Ad blockers (door Jorn)
+#### B. Ad blockers (door Jorn)
 <img width="317" alt="Schermafbeelding 2022-03-24 om 23 08 06" src="https://user-images.githubusercontent.com/74248007/160018507-4c7926d5-60a7-451c-8549-9851010180bb.png">
 
 Ad blockers zijn steeds populairder. 42,7% van de internet gebruikers wereldwijd zeggen een ad blocker te gebruiken. Deze ad blockers blokkeren automatisch advertentie sectie's op sites, maar ook facebook trackers en andere analytics. Dit gebeurt voordat deze geladen kunnen worden op een site, erg handig dus qua privacy en performance. Een site wordt namelijk aanzienlijk sneller als het niet alle advertenties en trackers hoeft te laden.
@@ -203,7 +203,7 @@ Als web developer kun je hier rekening mee houden door:
 [https://backlinko.com/ad-blockers-users](https://backlinko.com/ad-blockers-users)
 
 
-### C. Browser detect (door Jorn)
+#### C. Browser detect (door Jorn)
 Browser detect of ook wel Browser sniffing wordt gebruikt om te achterhalen welke browser wordt gebruikt door de bezoeker van je site. Dit zou je kunnen gebruiken om speciale styling te laten zien, informatie te verzamelen over je bezoekers of om te checken of de browser een bepaalde feature support.
 
 Welke browser gebruikt wordt kun je (in theorie) achterhalen door te kijken naar de 'User agent string'. Deze string wordt meegegeven in de HTTP Headers.
@@ -238,102 +238,90 @@ Er zitten alleen een hoop haken en ogen aan Browser sniffing:
 [https://dev.opera.com/blog/perils-browser-sniffing/](https://dev.opera.com/blog/perils-browser-sniffing/)
 
 
-### Eindopdracht ✨ Progressive Enhanced Browser Technologie
+# Eindopdracht ✨ Progressive Enhanced Browser Technologie
 
 
-<!-- ## Wireflow and/or Breakdown sketch
-
-
-## Core functionality 
-Give answers to questions in a survey and submit them with the action and post attributes. This is the first layer, just HTML and just the core functionalities.
-
-## Functional/reliable, usable en pleasurable layers
-To make it more reliable you give feedback to the user when they have submitted their answers. Giving them the confirmation that everything went alright. 
-
-If i'm going to be honest, most regular internet users wouldn't trust the styling that's used with only an HTML file. Just because it's boring and so old-looking, which in their eyes could mean it's outdated so no thank you to that experience. With the use of CSS we make the website look more reliable. Just pointer cursors can already change the perspective of the user and make them want to click on things, because it looks familiar and indicates usability. It also makes things like the number input more functional since it now shows the up and down arrows.
-
-
-
-## Princples of Progressive Enhancement and how i applied them
-
-
-## Applied features description with sources / feature detection
-
-
-## Accessibility testing 
-
-
-## 4 browsers I tested on -->
-
-## Een link naar de demo.
+# Een link naar de demo.
 
 https://farrahton-browser-technologies.herokuapp.com/ 
 
-Use case 
-
-## Een (wireflow) schets van de functionaliteit met een beschrijving van de core functionality. Geef ook aan wat de functional/reliable, usable en pleasurable laag.
+# Wireflow
 
 ![breakdownSchets](https://user-images.githubusercontent.com/92303930/162079115-724a67e5-cfc4-4854-95bb-75cacca8d162.jpeg)
 
+# Core functionality 
+Give answers to questions in a survey and submit them with the action and post attributes. Server-side it adds the answers to a json file. This is the first layer, just HTML and just the core functionalities.
 
-## Een beschrijving van de feature(s)/Browser Technologies die in je demo zijn gebruikt en hoe je dit PE hebt toegepast
+<details>
+<summary>Screenshot</summary>
+</details>
 
-
-## Core functionality 
-Give answers to questions in a survey and submit them with the action and post attributes. This is the first layer, just HTML and just the core functionalities.
-
-## Functional/reliable, usable en pleasurable layers
+# Functional/reliable, usable en pleasurable layers
 To make it more reliable you give feedback to the user when they have submitted their answers. Giving them the confirmation that everything went alright. 
 
-If i'm going to be honest, most regular internet users wouldn't trust the styling that's used with only an HTML file. Just because it's boring and so old-looking, which in their eyes could mean it's outdated so no thank you to that experience. With the use of CSS we make the website look more reliable. Just pointer cursors can already change the perspective of the user and make them want to click on things, because it looks familiar and indicates usability. It also makes things like the number input more functional since it now shows the up and down arrows.
+If i'm going to be honest, most regular internet users wouldn't trust the styling that's used with only an HTML file. Just because it's boring and so old-looking, which in their eyes could mean it's outdated. With the use of CSS we make the website look more reliable. Just a pointer cursors can already change the perspective of the user and make them want to click on things, because it looks familiar and indicates usability. It also makes things like the number input more functional since it now shows the up and down arrows.
 
-The most pleasurable layer would be with animations and a way to make the form look shorter to the user. With the use of a multistepform I wanted to achieve that. Which for the most part is a success. I only need to change the transform: scale(0) to transform: scale(1) from the keyfram fade when javascript is disabled or the other way arounf (turn it on when it's enabled). According to articles i could use a class on the body with .-no.js and add that to the selector too, but since the things feel opposite in my head (i'm brain dead currently) it's not clicking how to do just that. So let's pretend I have fixed that by just changing it manually, and wow yay it's working!! How great is this life again, I'm for sure enjoying it more now!
-<details> <summary>Sources used</summary> tutorial i used to make the JavaScript version https://www.youtube.com/watch?v=VdqtdKXxKhM </details>
+<details>
+<summary>Screenshot</summary>
+</details>
 
-## Een lijst met vier browsers waarin je hebt getest:
-	- voor de desktop 1 Chromium 1 niet-Chromium browser
-    ->Chrome
+The most pleasurable layer would be with a way to make the form look shorter to the user. With the use of a multistepform I wanted to achieve that. With the use of an array. Only one data-step needs to be active and the others will have display:none. 
 
-    -> Firefox
-	- voor mobiel 1 iOS + 1 Android OF een Samsung- en een niet-Samsung Android)
+When disabling JavaScript the user doesn't need to see the previous and next buttons, since they're not necessary when it's just a long list on one page. 
 
-    -> iPhone 8 Plus
-
-    -> Moto e(6i)
+<details>
+<summary>Screenshot</summary>
+</details>
 
 
-##  een testverslag met
-	- een beschrijving van de feature-lijst die zijn onderzocht
+<details> <summary>Sources</summary> Tutorial I used to make the JavaScript version  https://www.youtube.com/watch?v=VdqtdKXxKhM  </details>
+
+<br>
+
+# Een lijst met vier browsers waarin je hebt getest:
+1. Chrome (on MacBook Pro (Retina, 13-inch, Mid 2014))
+2. Firefox (on MacBook Pro (Retina, 13-inch, Mid 2014))
+(also Brave and Flo, but had to delete Brave to make storageroom for FireFox and flo wasn't very user-friendly yet)
+3. Safari (on iPhone 8 Plus)
+4. Nexus 5 Android 6.0.1 (from Devicelab) / Vivaldi on Moto e6i *
+
+Everything works according to plan, with JavaScript as well as when I disable JavaScript on devices that allow so.
+
+* On the Nexus it's tricky with the @supports, because there are moments it goes for the linear-gradient and there are moments where it chooses the <code>background-image: url()</code> like older browsers that do not support <code> background: linear gradient </code> do. 
+
+#  Features
 
 On a few browsers like the one on the Lumia 620 linear gradient isn't supported. Since I still want the colors as the background I put an image with it as a background-image and an @support linear gradient for browser that do support it. 
 
-I wanted to progressively enhance the user experience for people with JavaScript turned on. For them the survey is going to feel a bit shorter (more pleasurable), with the use of a previous and next button and splitting the survey even more into seperate subjects. 
+I wanted to progressively enhance the user experience for people with JavaScript turned on. For them the survey is going to feel a bit shorter (more pleasurable), with the use of a previous and next button and splitting the survey into even more seperate subjects. This way they don't have a long page they have to scroll through, which can feel exhausting. 
 
-### Accessibility testing
+- Require/checked etc. in just html to validate the form at its core. Another validation in script for the pleasurable verion. 
+- Still see your answers when you go a step back
+
+# Accessibility testing
 
 - <details> <summary> In the dev tools I emulated forced color active. At first you couldn't see any border around the inputs. By using a solid-transparent border it didn't affect the look I wanted without a border and it now shows a good contrasting border for people that have that turned on.</summary><img width="1280" alt="emulation forced color" src="https://user-images.githubusercontent.com/92303930/162079151-73998f76-01ac-4328-b5ce-13be8f0a50a6.png"></details> 
 - Added understandable labels and aria-labels when needed.
 - Sufficient contrast ratio for background and foreground colors 
 - Even with the vision deficiencies emulations the page still has good contrasting colors
 - Heading elements appear in a sequentially-descending order
+- On lighthouse it's scoring 100% on accessibility 
 
+# Which browser do and do not support the features
+  <strong> Flow </strong>
 
-### welke browsers de feature(s) wel/niet ondersteunen
-  #### Flow
   Things that flow does not support
       • Things that have to do with a mouseover in CSS, for example:
-        ◦ :hover 
+        ◦ :hover  (not all effects, box shadow does work but filter does not)
         ◦ cursor: pointer
         ◦ :focus
       • @supports 
       • The input types and their default styling, think of the down arrow for a drop down menu. Since hover doesn’t work and tabbing is different from other browsers it could be difficult for the user to understand that they can select an option.
       • required/selected/checked
 
-  #### Chrome
-  Chrome was kinda lame, because it didn't show the up and down arrows for the number input. So to fix that i had to change the opacity to 1 with the selector: <code>::-webkit-inner-spin-button</code> and there you go it's showing and doing the one job they had.
+  <strong> Chrome </strong>
 
-	- welke functionaliteiten zoals JavaScript je aan en uit hebt gezet in de tests
-When disabling CSS all the fieldsets are still organized and have space in between to make it a bette
+  Chrome was kinda lame, because it didn't show the up and down arrows for the number input. So to fix that i had to change the opacity to 1 with the selector: <code>::-webkit-inner-spin-button</code> and there you go it's showing and doing the one job they had.
 
 
 

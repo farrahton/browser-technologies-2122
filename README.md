@@ -254,6 +254,8 @@ Give answers to questions in a survey and submit them with the action and post a
 
 <details>
 <summary>Screenshot</summary>
+  <img width="1220" alt="Screenshot 2022-04-07 at 17 29 23" src="https://user-images.githubusercontent.com/92303930/162236336-50b1a9c3-5851-439a-bdec-811406d38127.png">
+
 </details>
 
 # Functional/reliable, usable en pleasurable layers
@@ -263,6 +265,7 @@ If i'm going to be honest, most regular internet users wouldn't trust the stylin
 
 <details>
 <summary>Screenshot</summary>
+<img width="1223" alt="Screenshot 2022-04-07 at 17 30 03" src="https://user-images.githubusercontent.com/92303930/162236379-b8e4dd2b-9afe-4bb5-87a2-26ee97759ddd.png">
 </details>
 
 The most pleasurable layer would be with a way to make the form look shorter to the user. With the use of a multistepform I wanted to achieve that. With the use of an array. Only one data-step needs to be active and the others will have display:none. 
@@ -271,6 +274,7 @@ When disabling JavaScript the user doesn't need to see the previous and next but
 
 <details>
 <summary>Screenshot</summary>
+<img width="1223" alt="Screenshot 2022-04-07 at 17 30 50" src="https://user-images.githubusercontent.com/92303930/162236460-1a8ae5fe-1c5b-4770-8c84-97a01e67f8ba.png">
 </details>
 
 

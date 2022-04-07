@@ -1,5 +1,9 @@
 # Browser Technologies eerste opdrachten
 
+- [Opdracht 1](#Opdracht-1)
+- [Opdracht 2](#Opdracht-2)
+- [Eindopracht](#Eindopdracht)
+
 ## Opdracht 1 🛹 NPM install Progressive- enhancement
 
 https://roel2407.github.io/Browser-tech-team1/

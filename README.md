@@ -1,14 +1,14 @@
 # Browser Technologies eerste opdrachten
 
-- [Opdracht 1 🛹 NPM install Progressive- enhancement](#Opdracht-1-🛹-NPM-install-Progressive-enhancement)
-- [Opdracht 2 💔 Breek het Web](#Opdracht-2-💔-Breek-het-Web)
+- [Opdracht 1 🛹 NPM install Progressive- enhancement](#Opdracht-1)
+- [Opdracht 2 💔 Breek het Web](#Opdracht-2)
 - [Eindopdracht ✨](#Eindopdracht)
 
-# Opdracht 1 🛹 NPM install Progressive- enhancement
+# Opdracht 1 
 
 https://roel2407.github.io/Browser-tech-team1/
 
-# Opdracht 2 💔 Breek het Web
+# Opdracht 2
 
 ### Team Dikdik
 ![image](https://user-images.githubusercontent.com/92303930/160085087-208e595d-8d71-4c88-97f5-8ec0d5184cb5.png)

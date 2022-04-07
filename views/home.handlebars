@@ -11,8 +11,6 @@
 </head>
 
 <body>
-
-
 	{{#if resultaten}}
 
 	<h4>Yayy, je hebt de enquête overleefd! Dit zijn jouw antwoorden:
@@ -24,9 +22,9 @@
 	<form action="/" enctype="application/x-www-form-urlencoded" method="post" data-multi-step>
 		<fieldset class="card" data-step>
 			<legend>
-				<h3 class="step-title"> <strong>
+				<h2 class="step-title"> <strong>
 						GEGEVENS
-					</strong> </h3>
+					</strong> </h2>
 			</legend>
 			<div class="form-group">
 				<label for="voornaam">Voornaam:</label>
@@ -41,16 +39,16 @@
 				<input required type="text" id="studentennummer" name="studentennummer" placeholder="5008">
 			</div>
 
-			<button type="button" data-next>Volgende</button>
+			<button class="pe-buttons" type="button" data-next>Volgende</button>
 		</fieldset>
 		<fieldset class="card" data-step>
 			<legend>
-				<h3 class="step-title"> <strong>
+				<h2 class="step-title"> <strong>
 						Web App From Scratch
-					</strong> </h3>
+					</strong> </h2>
 			</legend>
 			<div class="form-group">
-				<h2>Welke docent(en) had je voor dit vak?</h2>
+				<h3>Welke docent(en) had je voor dit vak?</h3>
 
 				<select required name="wafs-docent1" id="wafs-docent1">
 					<option value="wafs-docent1-joost" selected>Joost Faber</option>
@@ -76,7 +74,7 @@
 					<option value="wafs-docent2-shyanta"> Shyanta Vleugel</option>
 				</select>
 
-				<h2>Weken waarin je het vak deed:</h2>
+				<h3>Weken waarin je het vak deed:</h3>
 				<select required name="wafs-week" id="wafs-week">
 					<option value="wafs-week1-3" selected>Week 1-3</option>
 					<option value="wafs-week4"> Week 4</option>
@@ -87,11 +85,11 @@
 				</select>
 
 				<label for="wafs-cijferSchaal">
-					<h2>Wat vond je van de lesstof op een schaal van 1 tot 10? (1= makkelijk, 10= moeilijk)</h2>
+					<h3>Wat vond je van de lesstof op een schaal van 1 tot 10? (1= makkelijk, 10= moeilijk)</h3>
 				</label>
 				<input required type="number" id="wafs-cijferSchaal" name="wafs-cijferSchaal" min="1" max="10">
 
-				<h2>Hoe duidelijk is het uitgelegd?</h2>
+				<h3>Hoe duidelijk is het uitgelegd?</h3>
 				<div><input type="radio" id="wafs-geen-uitleg" name="wafs-uitlegSchaal" value="wafs-geen-uitleg"
 						required>
 					<label for="wafs-geen-uitleg">Zo goed als geen uitleg gekregen</label>
@@ -102,7 +100,8 @@
 				</div>
 				<div><input type="radio" id="wafs-lastige-begrippen" name="wafs-uitlegSchaal"
 						value="wafs-lastige-begrippen">
-					<label for="wafs-lastige-begrippen">Er werden vaak begrippen gebruikt en niet verder uitgelegd die
+					<label for="wafs-lastige-begrippen">Er werden vaak begrippen gebruikt en niet verder
+						uitgelegd die
 						niet
 						voor iedereen bekend waren</label>
 				</div>
@@ -110,48 +109,53 @@
 					<label for="wafs-heldere-uitleg">Heldere uitleg waar ik mee opweg kon</label>
 				</div>
 				<div><input type="radio" id="wafs-super-uitleg" name="wafs-uitlegSchaal" value="wafs-super-uitleg">
-					<label for="wafs-super-uitleg">Super goede uitleg, waardoor ik geen vragen meer hoefde te stellen om
+					<label for="wafs-super-uitleg">Super goede uitleg, waardoor ik geen vragen meer hoefde te
+						stellen om
 						het
 						vak af te ronden</label>
 				</div>
 
-				<h2>Eigen inzicht, dus hoe goed snap je het?</h2>
+				<h3>Eigen inzicht, dus hoe goed snap je het?</h3>
 				<div><input type="radio" id="wafs-inzicht1" name="wafs-inzichtAntwoord" value="wafs-inzicht1">
 					<label for="wafs-inzicht1">Ik heb niets onthouden</label>
 				</div>
 				<div><input type="radio" id="wafs-inzicht2" name="wafs-inzichtAntwoord" value="wafs-inzicht2">
-					<label for="wafs-inzicht2">Buiten de minor heb ik het nog niet toegepast/ben het nog niet
+					<label for="wafs-inzicht2">Buiten de minor heb ik het nog niet toegepast/ben het nog
+						niet
 						tegengekomen</label>
 				</div>
 				<div><input type="radio" id="wafs-inzicht3" name="wafs-inzichtAntwoord" value="wafs-inzicht3">
-					<label for="wafs-inzicht3">Ik weet het nu te kopieren en plakken en begrijp het soort van</label>
+					<label for="wafs-inzicht3">Ik weet het nu te kopieren en plakken en begrijp het soort
+						van</label>
 				</div>
 				<div><input type="radio" id="wafs-inzicht4" name="wafs-inzichtAntwoord" value="wafs-inzicht4">
 					<label for="wafs-inzicht4">Ik kan het zelf schrijven</label>
 				</div>
 				<div><input type="radio" id="wafs-inzicht5" name="wafs-inzichtAntwoord" value="wafs-inzicht5">
-					<label for="wafs-inzicht5">Ik kan het zelf schrijven én aan mensen met verschillende levels van
+					<label for="wafs-inzicht5">Ik kan het zelf schrijven én aan mensen met verschillende
+						levels van
 						kennis
 						uitleggen</label>
 				</div>
 
-				<label for="wafs-overig">
-					<h2>Nog iets te delen? </h2>
-				</label>
-				<textarea id="wafs-overig" name="wafs-overig">Nee, niet per se...</textarea>
-
-				<button type="button" data-previous>Vorige</button>
-				<button type="button" data-next>Volgende</button>
+				<div>
+					<label for="wafs-overig">
+						<h3>Nog iets te delen? </h3>
+					</label>
+					<textarea id="wafs-overig" name="wafs-overig">Nee, niet per se...</textarea>
+				</div>
+				<button class="pe-buttons" type="button" data-previous>Vorige</button>
+				<button class="pe-buttons" type="button" data-next>Volgende</button>
 			</div>
 		</fieldset>
 		<fieldset class="card" data-step>
 			<legend>
-				<h3 class="step-title"> <strong>
+				<h2 class="step-title"> <strong>
 						CSS To the Rescue
-					</strong> </h3>
+					</strong> </h2>
 			</legend>
 			<div class="form-group">
-				<h2>Welke docent(en) had je voor dit vak?</h2>
+				<h3>Welke docent(en) had je voor dit vak?</h3>
 
 				<select required name="css-docent1" id="css-docent1">
 					<option value="css-docent1-joost">Joost Faber</option>
@@ -179,7 +183,7 @@
 
 
 
-				<h2>Weken waarin je het vak deed:</h2>
+				<h3>Weken waarin je het vak deed:</h3>
 				<select required name="css-week" id="css-week">
 					<option value="css-week1-3" selected>Week 1-3</option>
 					<option value="css-week4"> Week 4</option>
@@ -190,11 +194,11 @@
 				</select>
 
 				<label for="css-cijferSchaal">
-					<h2>Wat vond je van de lesstof op een schaal van 1 tot 10? (1= makkelijk, 10= moeilijk)</h2>
+					<h3>Wat vond je van de lesstof op een schaal van 1 tot 10? (1= makkelijk, 10= moeilijk)</h3>
 				</label>
 				<input required type="number" id="css-cijferSchaal" name="css-cijferSchaal" min="1" max="10">
 
-				<h2>Hoe duidelijk is het uitgelegd?</h2>
+				<h3>Hoe duidelijk is het uitgelegd?</h3>
 				<div><input type="radio" id="css-uitlegschaal1" name="css-uitlegSchaal" value="css-uitlegschaal1">
 					<label for="css-uitlegschaal1">Zo goed als geen uitleg gekregen</label>
 				</div>
@@ -202,18 +206,20 @@
 					<label for="css-uitlegschaal2">Er was uitleg maar het was slaapverwekkend</label>
 				</div>
 				<div><input type="radio" id="css-uitlegschaal3" name="css-uitlegSchaal" value="css-uitlegschaal3">
-					<label for="css-uitlegschaal3">Er werden vaak begrippen gebruikt en niet verder uitgelegd die niet
+					<label for="css-uitlegschaal3">Er werden vaak begrippen gebruikt en niet verder uitgelegd
+						die niet
 						voor iedereen bekend waren</label>
 				</div>
 				<div><input type="radio" id="css-uitlegschaal4" name="css-uitlegSchaal" value="css-uitlegschaal4">
 					<label for="css-uitlegschaal4">Heldere uitleg waar ik mee opweg kon</label>
 				</div>
 				<div><input type="radio" id="css-uitlegschaal5" name="css-uitlegSchaal" value="css-uitlegschaal5">
-					<label for="css-uitlegschaal5">Super goede uitleg, waardoor ik geen vragen meer hoefde te stellen om
+					<label for="css-uitlegschaal5">Super goede uitleg, waardoor ik geen vragen meer hoefde te
+						stellen om
 						het vak af te ronden</label>
 				</div>
 
-				<h2>Eigen inzicht, dus hoe goed snap je het?</h2>
+				<h3>Eigen inzicht, dus hoe goed snap je het?</h3>
 				<div><input type="radio" id="css-inzicht1" name="css-inzichtAntwoord" value="css-inzicht1">
 					<label for="css-inzicht1">Ik heb niets onthouden</label>
 				</div>
@@ -222,33 +228,37 @@
 						tegengekomen</label>
 				</div>
 				<div><input type="radio" id="css-inzicht3" name="css-inzichtAntwoord" value="css-inzicht3">
-					<label for="css-inzicht3">Ik weet het nu te kopieren en plakken en begrijp het soort van</label>
+					<label for="css-inzicht3">Ik weet het nu te kopieren en plakken en begrijp het soort
+						van</label>
 				</div>
 				<div><input type="radio" id="css-inzicht4" name="css-inzichtAntwoord" value="css-inzicht4">
 					<label for="css-inzicht4">Ik kan het zelf schrijven</label>
 				</div>
 				<div><input type="radio" id="css-inzicht5" name="css-inzichtAntwoord" value="css-inzicht5">
-					<label for="css-inzicht5">Ik kan het zelf schrijven én aan mensen met verschillende levels van
+					<label for="css-inzicht5">Ik kan het zelf schrijven én aan mensen met verschillende
+						levels van
 						kennis uitleggen</label>
 				</div>
 
-				<label for="css-overig">
-					<h2>Nog iets te delen? </h2>
-				</label>
-				<textarea id="css-overig" name="css-overig">Nee, niet per se...</textarea>
+				<div>
+					<label for="css-overig">
+						<h3>Nog iets te delen? </h3>
+					</label>
+					<textarea id="css-overig" name="css-overig">Nee, niet per se...</textarea>
+				</div>
 			</div>
 
-			<button type="button" data-previous>Vorige</button>
-			<button type="button" data-next>Volgende</button>
+			<button class="pe-buttons" type="button" data-previous>Vorige</button>
+			<button class="pe-buttons" type="button" data-next>Volgende</button>
 		</fieldset>
 		<fieldset class="card" data-step>
 			<legend>
-				<h3 class="step-title"> <strong>
+				<h2 class="step-title"> <strong>
 						Project 1
-					</strong> </h3>
+					</strong> </h2>
 			</legend>
 			<div class="form-group">
-				<h2>Welke docent(en) had je voor dit vak?</h2>
+				<h3>Welke docent(en) had je voor dit vak?</h3>
 
 				<select required name="project1-docent1" id="project1-docent1">
 					<option value="project1-docent1-joost">Joost Faber</option>
@@ -276,7 +286,7 @@
 
 
 
-				<h2>Weken waarin je het vak deed:</h2>
+				<h3>Weken waarin je het vak deed:</h3>
 				<select required name="project1-week" id="project1-week">
 					<option value="project1-week1-3">Week 1-3</option>
 					<option value="project1-week4" selected> Week 4</option>
@@ -287,11 +297,11 @@
 				</select>
 
 				<label for="project1-cijferSchaal">
-					<h2>Wat vond je van de lesstof op een schaal van 1 tot 10? (1= makkelijk, 10= moeilijk)</h2>
+					<h3>Wat vond je van de lesstof op een schaal van 1 tot 10? (1= makkelijk, 10= moeilijk)</h3>
 				</label>
 				<input required type="number" id="project1-cijferSchaal" name="project1-cijferSchaal" min="1" max="10">
 
-				<h2>Hoe duidelijk is het uitgelegd?</h2>
+				<h3>Hoe duidelijk is het uitgelegd?</h3>
 				<div><input type="radio" id="project1-uitlegschaal1" name="project1-uitlegSchaal"
 						value="project1-uitlegschaal1">
 					<label for="project1-uitlegschaal1">Zo goed als geen uitleg gekregen</label>
@@ -302,7 +312,8 @@
 				</div>
 				<div><input type="radio" id="project1-uitlegschaal3" name="project1-uitlegSchaal"
 						value="project1-uitlegschaal3">
-					<label for="project1-uitlegschaal3">Er werden vaak begrippen gebruikt en niet verder uitgelegd die
+					<label for="project1-uitlegschaal3">Er werden vaak begrippen gebruikt en niet verder
+						uitgelegd die
 						nietvoor iedereen bekend waren</label>
 				</div>
 				<div><input type="radio" id="project1-uitlegschaal4" name="project1-uitlegSchaal"
@@ -311,23 +322,26 @@
 				</div>
 				<div><input type="radio" id="project1-uitlegschaal5" name="project1-uitlegSchaal"
 						value="project1-uitlegschaal5">
-					<label for="project1-uitlegschaal5">Super goede uitleg, waardoor ik geen vragen meer hoefde te
+					<label for="project1-uitlegschaal5">Super goede uitleg, waardoor ik geen vragen meer hoefde
+						te
 						stellen om het vak af te ronden</label>
 				</div>
 
-				<h2>Eigen inzicht, dus hoe goed snap je het?</h2>
+				<h3>Eigen inzicht, dus hoe goed snap je het?</h3>
 				<div><input type="radio" id="project1-inzicht1" name="project1-inzichtAntwoord"
 						value="project1-inzicht1">
 					<label for="project1-inzicht1">Ik heb niets onthouden</label>
 				</div>
 				<div><input type="radio" id="project1-inzicht2" name="project1-inzichtAntwoord"
 						value="project1-inzicht2">
-					<label for="project1-inzicht2">Buiten de minor heb ik het nog niet toegepast/ben het nog niet
+					<label for="project1-inzicht2">Buiten de minor heb ik het nog niet toegepast/ben het nog
+						niet
 						tegengekomen</label>
 				</div>
 				<div><input type="radio" id="project1-inzicht3" name="project1-inzichtAntwoord"
 						value="project1-inzicht3">
-					<label for="project1-inzicht3">Ik weet het nu te kopieren en plakken en begrijp het soort
+					<label for="project1-inzicht3">Ik weet het nu te kopieren en plakken en begrijp het
+						soort
 						van</label>
 				</div>
 				<div><input type="radio" id="project1-inzicht4" name="project1-inzichtAntwoord"
@@ -336,30 +350,33 @@
 				</div>
 				<div><input type="radio" id="project1-inzicht5" name="project1-inzichtAntwoord"
 						value="project1-inzicht5">
-					<label for="project1-inzicht5">Ik kan het zelf schrijven én aan mensen met verschillende levels van
+					<label for="project1-inzicht5">Ik kan het zelf schrijven én aan mensen met verschillende
+						levels van
 						kennis uitleggen</label>
 				</div>
 
-				<label for="project1-overig">
-					<h2>Nog iets te delen? </h2>
-				</label>
-				<textarea id="project1-overig" name="project1-overig">Nee, niet per se...</textarea>
+				<div>
+					<label for="project1-overig">
+						<h3>Nog iets te delen? </h3>
+					</label>
+					<textarea id="project1-overig" name="project1-overig">Nee, niet per se...</textarea>
+				</div>
 			</div>
 
-			<button type="button" data-previous>Vorige</button>
-			<button type="button" data-next>Volgende</button>
+			<button class="pe-buttons" type="button" data-previous>Vorige</button>
+			<button class="pe-buttons" type="button" data-next>Volgende</button>
 		</fieldset>
 
 
 
 		<fieldset class="card" data-step>
 			<legend>
-				<h3 class="step-title"> <strong>
+				<h2 class="step-title"> <strong>
 						Progressive Web App
-					</strong> </h3>
+					</strong> </h2>
 			</legend>
 			<div class="form-group">
-				<h2>Welke docent(en) had je voor dit vak?</h2>
+				<h3>Welke docent(en) had je voor dit vak?</h3>
 
 				<select required name="pwa-docent1" id="pwa-docent1">
 					<option value="pwa-docent1-joost">Joost Faber</option>
@@ -386,7 +403,7 @@
 				</select>
 
 
-				<h2>Weken waarin je het vak deed:</h2>
+				<h3>Weken waarin je het vak deed:</h3>
 				<select required name="pwa-week" id="pwa-week">
 					<option value="pwa-week1-3">Week 1-3</option>
 					<option value="pwa-week4"> Week 4</option>
@@ -397,11 +414,11 @@
 				</select>
 
 				<label for="pwa-cijferSchaal">
-					<h2>Wat vond je van de lesstof op een schaal van 1 tot 10? (1= makkelijk, 10= moeilijk)</h2>
+					<h3>Wat vond je van de lesstof op een schaal van 1 tot 10? (1= makkelijk, 10= moeilijk)</h3>
 				</label>
 				<input required type="number" id="pwa-cijferSchaal" name="pwa-cijferSchaal" min="1" max="10">
 
-				<h2>Hoe duidelijk is het uitgelegd?</h2>
+				<h3>Hoe duidelijk is het uitgelegd?</h3>
 				<div><input type="radio" id="pwa-uitlegschaal1" name="pwa-uitlegSchaal" value="pwa-uitlegschaal1">
 					<label for="pwa-uitlegschaal1">Zo goed als geen uitleg gekregen</label>
 				</div>
@@ -409,18 +426,20 @@
 					<label for="pwa-uitlegschaal2">Er was uitleg maar het was slaapverwekkend</label>
 				</div>
 				<div><input type="radio" id="pwa-uitlegschaal3" name="pwa-uitlegSchaal" value="pwa-uitlegschaal3">
-					<label for="pwa-uitlegschaal3">Er werden vaak begrippen gebruikt en niet verder uitgelegd die niet
+					<label for="pwa-uitlegschaal3">Er werden vaak begrippen gebruikt en niet verder uitgelegd
+						die niet
 						voor iedereen bekend waren</label>
 				</div>
 				<div><input type="radio" id="pwa-uitlegschaal4" name="pwa-uitlegSchaal" value="pwa-uitlegschaal4">
 					<label for="pwa-uitlegschaal4">Heldere uitleg waar ik mee opweg kon</label>
 				</div>
 				<div><input type="radio" id="pwa-uitlegschaal5" name="pwa-uitlegSchaal" value="pwa-uitlegschaal5">
-					<label for="pwa-uitlegschaal5">Super goede uitleg, waardoor ik geen vragen meer hoefde te stellen om
+					<label for="pwa-uitlegschaal5">Super goede uitleg, waardoor ik geen vragen meer hoefde te
+						stellen om
 						het vak af te ronden</label>
 				</div>
 
-				<h2>Eigen inzicht, dus hoe goed snap je het?</h2>
+				<h3>Eigen inzicht, dus hoe goed snap je het?</h3>
 				<div><input type="radio" id="pwa-inzicht1" name="pwa-inzichtAntwoord" value="pwa-inzicht1">
 					<label for="pwa-inzicht1">Ik heb niets onthouden</label>
 				</div>
@@ -429,37 +448,40 @@
 						tegengekomen</label>
 				</div>
 				<div><input type="radio" id="pwa-inzicht3" name="pwa-inzichtAntwoord" value="pwa-inzicht3">
-					<label for="pwa-inzicht3">Ik weet het nu te kopieren en plakken en begrijp het soort van</label>
+					<label for="pwa-inzicht3">Ik weet het nu te kopieren en plakken en begrijp het soort
+						van</label>
 				</div>
 				<div><input type="radio" id="pwa-inzicht4" name="pwa-inzichtAntwoord" value="pwa-inzicht4">
 					<label for="pwa-inzicht4">Ik kan het zelf schrijven</label>
 				</div>
 				<div><input type="radio" id="pwa-inzicht5" name="pwa-inzichtAntwoord" value="pwa-inzicht5">
-					<label for="pwa-inzicht5">Ik kan het zelf schrijven én aan mensen met verschillende levels van
+					<label for="pwa-inzicht5">Ik kan het zelf schrijven én aan mensen met verschillende
+						levels van
 						kennis uitleggen</label>
 				</div>
-
-				<label for="pwa-overig">
-					<h2>Nog iets te delen? </h2>
-				</label>
-				<textarea id="pwa-overig" name="pwa-overig">Nee, niet per se...</textarea>
+				<div>
+					<label for="pwa-overig">
+						<h3>Nog iets te delen? </h3>
+					</label>
+					<textarea id="pwa-overig" name="pwa-overig">Nee, niet per se...</textarea>
+				</div>
 			</div>
 
-			<button type="button" data-previous>Vorige</button>
-			<button type="button" data-next>Volgende</button>
+			<button class="pe-buttons" type="button" data-previous>Vorige</button>
+			<button class="pe-buttons" type="button" data-next>Volgende</button>
 		</fieldset>
 
 
 
 		<fieldset class="card" data-step>
 			<legend>
-				<h3 class="step-title"> <strong>
+				<h2 class="step-title"> <strong>
 						Broswer Technologies
-					</strong> </h3>
+					</strong> </h2>
 			</legend>
 			<div class="form-group">
 
-				<h2>Welke docent(en) had je voor dit vak?</h2>
+				<h3>Welke docent(en) had je voor dit vak?</h3>
 
 				<select required name="bt-docent1" id="bt-docent1">
 					<option value="bt-docent1-joost">Joost Faber</option>
@@ -487,7 +509,7 @@
 
 
 
-				<h2>Weken waarin je het vak deed:</h2>
+				<h3>Weken waarin je het vak deed:</h3>
 				<select required name="bt-week" id="bt-week">
 					<option value="bt-week1-3">Week 1-3</option>
 					<option value="bt-week4"> Week 4</option>
@@ -498,11 +520,11 @@
 				</select>
 
 				<label for="bt-cijferSchaal">
-					<h2>Wat vond je van de lesstof op een schaal van 1 tot 10? (1= makkelijk, 10= moeilijk)</h2>
+					<h3>Wat vond je van de lesstof op een schaal van 1 tot 10? (1= makkelijk, 10= moeilijk)</h3>
 				</label>
 				<input required type="number" id="bt-cijferSchaal" name="bt-cijferSchaal" min="1" max="10">
 
-				<h2>Hoe duidelijk is het uitgelegd?</h2>
+				<h3>Hoe duidelijk is het uitgelegd?</h3>
 				<div><input type="radio" id="bt-uitlegschaal1" name="bt-uitlegSchaal" value="bt-uitlegschaal1">
 					<label for="bt-uitlegschaal1">Zo goed als geen uitleg gekregen</label>
 				</div>
@@ -510,56 +532,63 @@
 					<label for="bt-uitlegschaal2">Er was uitleg maar het was slaapverwekkend</label>
 				</div>
 				<div><input type="radio" id="bt-uitlegschaal3" name="bt-uitlegSchaal" value="bt-uitlegschaal3">
-					<label for="bt-uitlegschaal3">Er werden vaak begrippen gebruikt en niet verder uitgelegd die niet
+					<label for="bt-uitlegschaal3">Er werden vaak begrippen gebruikt en niet verder uitgelegd
+						die niet
 						voor iedereen bekend waren</label>
 				</div>
 				<div><input type="radio" id="bt-uitlegschaal4" name="bt-uitlegSchaal" value="bt-uitlegschaal4">
 					<label for="bt-uitlegschaal4">Heldere uitleg waar ik mee opweg kon</label>
 				</div>
 				<div><input type="radio" id="bt-uitlegschaal5" name="bt-uitlegSchaal" value="bt-uitlegschaal5">
-					<label for="bt-uitlegschaal5">Super goede uitleg, waardoor ik geen vragen meer hoefde te stellen om
+					<label for="bt-uitlegschaal5">Super goede uitleg, waardoor ik geen vragen meer hoefde te
+						stellen om
 						het vak af te ronden</label>
 				</div>
 
-				<h2>Eigen inzicht, dus hoe goed snap je het?</h2>
+				<h3>Eigen inzicht, dus hoe goed snap je het?</h3>
 				<div><input type="radio" id="bt-inzicht1" name="bt-inzichtAntwoord" value="bt-inzicht1">
 					<label for="bt-inzicht1">Ik heb niets onthouden</label>
 				</div>
 				<div><input type="radio" id="bt-inzicht2" name="bt-inzichtAntwoord" value="bt-inzicht2">
-					<label for="bt-inzicht2">Buiten de minor heb ik het nog niet toegepast/ben het nog niet
+					<label for="bt-inzicht2">Buiten de minor heb ik het nog niet toegepast/ben het nog
+						niet
 						tegengekomen</label>
 				</div>
 				<div><input type="radio" id="bt-inzicht3" name="bt-inzichtAntwoord" value="bt-inzicht3">
-					<label for="bt-inzicht3">Ik weet het nu te kopieren en plakken en begrijp het soort van</label>
+					<label for="bt-inzicht3">Ik weet het nu te kopieren en plakken en begrijp het soort
+						van</label>
 				</div>
 				<div><input type="radio" id="bt-inzicht4" name="bt-inzichtAntwoord" value="bt-inzicht4">
 					<label for="bt-inzicht4">Ik kan het zelf schrijven</label>
 				</div>
 				<div><input type="radio" id="bt-inzicht5" name="bt-inzichtAntwoord" value="bt-inzicht5">
-					<label for="bt-inzicht5">Ik kan het zelf schrijven én aan mensen met verschillende levels van kennis
+					<label for="bt-inzicht5">Ik kan het zelf schrijven én aan mensen met verschillende
+						levels van kennis
 						uitleggen</label>
 				</div>
 
-				<label for="bt-overig">
-					<h2>Nog iets te delen? </h2>
-				</label>
-				<textarea id="bt-overig" name="bt-overig">Nee, niet per se...</textarea>
+				<div>
+					<label for="bt-overig">
+						<h3>Nog iets te delen? </h3>
+					</label>
+					<textarea id="bt-overig" name="bt-overig">Nee, niet per se...</textarea>
+				</div>
 			</div>
 
-			<button type="button" data-previous>Vorige</button>
-			<button type="button" data-next>Volgende</button>
+			<button class="pe-buttons" type="button" data-previous>Vorige</button>
+			<button class="pe-buttons" type="button" data-next>Volgende</button>
 		</fieldset>
 
 
 
 		<fieldset class="card" data-step>
 			<legend>
-				<h3 class="step-title"> <strong>
+				<h2 class="step-title"> <strong>
 						Project 2
-					</strong> </h3>
+					</strong> </h2>
 			</legend>
 			<div class="form-group">
-				<h2>Welke docent(en) had je voor dit vak?</h2>
+				<h3>Welke docent(en) had je voor dit vak?</h3>
 
 				<select required name="project2-docent1" id="project2-docent1">
 					<option value="project2-docent1-joost">Joost Faber</option>
@@ -587,7 +616,7 @@
 
 
 
-				<h2>Weken waarin je het vak deed:</h2>
+				<h3>Weken waarin je het vak deed:</h3>
 				<select required name="project2-week" id="project2-week">
 					<option value="project2-week1-3">Week 1-3</option>
 					<option value="project2-week4"> Week 4</option>
@@ -598,11 +627,11 @@
 				</select>
 
 				<label for="project2-cijferSchaal">
-					<h2>Wat vond je van de lesstof op een schaal van 1 tot 10? (1= makkelijk, 10= moeilijk)</h2>
+					<h3>Wat vond je van de lesstof op een schaal van 1 tot 10? (1= makkelijk, 10= moeilijk)</h3>
 				</label>
 				<input required type="number" id="project2-cijferSchaal" name="project2-cijferSchaal" min="1" max="10">
 
-				<h2>Hoe duidelijk is het uitgelegd?</h2>
+				<h3>Hoe duidelijk is het uitgelegd?</h3>
 				<div><input type="radio" id="project2-uitlegschaal1" name="project2-uitlegSchaal"
 						value="project2-uitlegschaal1">
 					<label for="project2-uitlegschaal1">Zo goed als geen uitleg gekregen</label>
@@ -631,7 +660,7 @@
 			</div>
 			</div>
 
-			<h2>Eigen inzicht, dus hoe goed snap je het?</h2>
+			<h3>Eigen inzicht, dus hoe goed snap je het?</h3>
 			<div><input type="radio" id="project2-inzicht1" name="project2-inzichtAntwoord" value="project2-inzicht1">
 				<label for="project2-inzicht1">Ik heb niets onthouden</label>
 			</div>
@@ -655,27 +684,27 @@
 					kennis uitleggen</label>
 			</div>
 			</div>
-
-			<label for="project2-overig">
-				<h2>Nog iets te delen? </h2>
-			</label>
-			<textarea id="project2-overig" name="project2-overig">Nee, niet per se...</textarea>
+			<div <label for="project2-overig">
+				<h3>Nog iets te delen? </h3>
+				</label>
+				<textarea id="project2-overig" name="project2-overig">Nee, niet per se...</textarea>
+			</div>
 			</div>
 
-			<button type="button" data-previous>Vorige</button>
-			<button type="button" data-next>Volgende</button>
+			<button class="pe-buttons" type="button" data-previous>Vorige</button>
+			<button class="pe-buttons" type="button" data-next>Volgende</button>
 		</fieldset>
 
 
 
 		<fieldset class="card" data-step>
 			<legend>
-				<h3 class="step-title"> <strong>
+				<h2 class="step-title"> <strong>
 						VAK: REAL TIME WEB
-					</strong> </h3>
+					</strong> </h2>
 			</legend>
 			<div class="form-group">
-				<h2>Welke docent(en) had je voor dit vak?</h2>
+				<h3>Welke docent(en) had je voor dit vak?</h3>
 
 
 				<select required name="rtw-docent1" id="rtw-docent1">
@@ -704,7 +733,7 @@
 
 
 
-				<h2>Weken waarin je het vak deed:</h2>
+				<h3>Weken waarin je het vak deed:</h3>
 				<select required name="rtw-week" id="rtb-week">
 					<option value="rtw-week1-3">Week 1-3</option>
 					<option value="rtw-week4"> Week 4</option>
@@ -715,11 +744,11 @@
 				</select>
 
 				<label for="rtw-cijferSchaal">
-					<h2>Wat vond je van de lesstof op een schaal van 1 tot 10? (1= makkelijk, 10= moeilijk)</h2>
+					<h3>Wat vond je van de lesstof op een schaal van 1 tot 10? (1= makkelijk, 10= moeilijk)</h3>
 				</label>
 				<input required type="number" id="rtw-cijferSchaal" name="rtw-cijferSchaal" min="1" max="10">
 
-				<h2>Hoe duidelijk is het uitgelegd?</h2>
+				<h3>Hoe duidelijk is het uitgelegd?</h3>
 				<div><input type="radio" id="rtw-uitlegschaal1" name="rtw-uitlegSchaal" value="rtw-uitlegschaal1">
 					<label for="rtw-uitlegschaal1">Zo goed als geen uitleg gekregen</label>
 				</div>
@@ -727,18 +756,20 @@
 					<label for="rtw-uitlegschaal2">Er was uitleg maar het was slaapverwekkend</label>
 				</div>
 				<div><input type="radio" id="rtw-uitlegschaal3" name="rtw-uitlegSchaal" value="rtw-uitlegschaal3">
-					<label for="rtw-uitlegschaal3">Er werden vaak begrippen gebruikt en niet verder uitgelegd die niet
+					<label for="rtw-uitlegschaal3">Er werden vaak begrippen gebruikt en niet verder uitgelegd
+						die niet
 						voor iedereen bekend waren</label>
 				</div>
 				<div><input type="radio" id="rtw-uitlegschaal4" name="rtw-uitlegSchaal" value="rtw-uitlegschaal4">
 					<label for="rtw-uitlegschaal4">Heldere uitleg waar ik mee opweg kon</label>
 				</div>
 				<div><input type="radio" id="rtw-uitlegschaal5" name="rtw-uitlegSchaal" value="rtw-uitlegschaal5">
-					<label for="rtw-uitlegschaal5">Super goede uitleg, waardoor ik geen vragen meer hoefde te stellen om
+					<label for="rtw-uitlegschaal5">Super goede uitleg, waardoor ik geen vragen meer hoefde te
+						stellen om
 						het vak af te ronden</label>
 				</div>
 
-				<h2>Eigen inzicht, dus hoe goed snap je het?</h2>
+				<h3>Eigen inzicht, dus hoe goed snap je het?</h3>
 				<div><input type="radio" id="rtw-inzicht1" name="rtw-inzichtAntwoord" value="rtw-inzicht1">
 					<label for="rtw-inzicht1">Ik heb niets onthouden</label>
 				</div>
@@ -759,28 +790,28 @@
 						mensen met verschillende levels van kennis
 						uitleggen</label>
 				</div>
-
-				<label for="rtw-overig">
-					<h2>Nog iets te delen? </h2>
-				</label>
-				<textarea id="rtw-overig" name="rtw-overig">Nee, niet per se...</textarea>
-
+				<div>
+					<label for="rtw-overig">
+						<h3>Nog iets te delen? </h3>
+					</label>
+					<textarea id="rtw-overig" name="rtw-overig">Nee, niet per se...</textarea>
+				</div>
 			</div>
 
-			<button type="button" data-previous>Vorige</button>
-			<button type="button" data-next>Volgende</button>
+			<button class="pe-buttons" type="button" data-previous>Vorige</button>
+			<button class="pe-buttons" type="button" data-next>Volgende</button>
 		</fieldset>
 
 
 
 		<fieldset class="card" data-step>
 			<legend>
-				<h3 class="step-title"> <strong>
+				<h2 class="step-title"> <strong>
 						VAK: HUMAN CENTERED DESIGN
-					</strong> </h3>
+					</strong> </h2>
 			</legend>
 			<div class="form-group">
-				<h2>Welke docent(en) had je voor dit vak?</h2>
+				<h3>Welke docent(en) had je voor dit vak?</h3>
 
 
 				<select required name="hcd-docent1" id="hcd-docent1">
@@ -807,7 +838,7 @@
 					<option value="hcd-docent2-shyanta"> Shyanta Vleugel</option>
 				</select>
 
-				<h2>Weken waarin je het vak deed:</h2>
+				<h3>Weken waarin je het vak deed:</h3>
 				<select required name="hcd-week" id="hcd-week">
 					<option value="hcd-week1-3">Week 1-3</option>
 					<option value="hcd-week4"> Week 4</option>
@@ -818,11 +849,11 @@
 				</select>
 
 				<label for="hcd-cijferSchaal">
-					<h2>Wat vond je van de lesstof op een schaal van 1 tot 10? (1= makkelijk, 10= moeilijk)</h2>
+					<h3>Wat vond je van de lesstof op een schaal van 1 tot 10? (1= makkelijk, 10= moeilijk)</h3>
 				</label>
 				<input required type="number" id="hcd-cijferSchaal" name="hcd-cijferSchaal" min="1" max="10">
 
-				<h2>Hoe duidelijk is het uitgelegd?</h2>
+				<h3>Hoe duidelijk is het uitgelegd?</h3>
 				<div><input type="radio" id="hcd-uitlegschaal1" name="hcd-uitlegSchaal" value="hcd-uitlegschaal1">
 					<label for="hcd-uitlegschaal1">Zo goed als geen uitleg gekregen</label>
 				</div>
@@ -848,7 +879,7 @@
 						ronden</label>
 				</div>
 
-				<h2>Eigen inzicht, dus hoe goed snap je het?</h2>
+				<h3>Eigen inzicht, dus hoe goed snap je het?</h3>
 				<div><input type="radio" id="hcd-inzicht1" name="hcd-inzichtAntwoord" value="hcd-inzicht1">
 					<label for="hcd-inzicht1">Ik heb niets onthouden</label>
 				</div>
@@ -869,16 +900,16 @@
 						mensen met verschillende levels van kennis
 						uitleggen</label>
 				</div>
-
-				<label for="hcd-overig">
-					<h2>Nog iets te delen? </h2>
-				</label>
-				<textarea id="hcd-overig" name="hcd-overig">Nee, niet per se...</textarea>
-
+				<div>
+					<label for="hcd-overig">
+						<h3>Nog iets te delen? </h3>
+					</label>
+					<textarea id="hcd-overig" name="hcd-overig">Nee, niet per se...</textarea>
+				</div>
 			</div>
 
-			<button type="button" data-previous>Vorige</button>
-			<button type="button" data-next>Volgende</button>
+			<button class="pe-buttons" type="button" data-previous>Vorige</button>
+			<button class="pe-buttons" type="button" data-next>Volgende</button>
 		</fieldset>
 
 
@@ -886,12 +917,12 @@
 
 		<fieldset class="card" data-step>
 			<legend>
-				<h3 class="step-title"> <strong>
+				<h2 class="step-title"> <strong>
 						VAK: WEEKLY NERD
-					</strong> </h3>
+					</strong> </h2>
 			</legend>
 			<div class="form-group">
-				<h2>Welke docent(en) had je voor dit vak?</h2>
+				<h3>Welke docent(en) had je voor dit vak?</h3>
 
 				<select name="wn-docent1" id="wn-docent1">
 					<option value="wn-docent1-joost">Joost Faber</option>
@@ -918,7 +949,7 @@
 				</select>
 
 
-				<h2>Weken waarin je het vak deed:</h2>
+				<h3>Weken waarin je het vak deed:</h3>
 				<select required name="wn-week" id="wn-week">
 					<option value="wn-week1-3">Week 1-3</option>
 					<option value="wn-week4"> Week 4</option>
@@ -930,11 +961,11 @@
 				</select>
 
 				<label for="wn-cijferSchaal">
-					<h2>Wat vond je van de lesstof op een schaal van 1 tot 10? (1= makkelijk, 10= moeilijk)</h2>
+					<h3>Wat vond je van de lesstof op een schaal van 1 tot 10? (1= makkelijk, 10= moeilijk)</h3>
 				</label>
 				<input required type="number" id="wn-cijferSchaal" name="wn-cijferSchaal" min="1" max="10">
 
-				<h2>Hoe duidelijk is het uitgelegd?</h2>
+				<h3>Hoe duidelijk is het uitgelegd?</h3>
 				<div><input type="radio" id="wn-uitlegschaal1" name="wn-uitlegSchaal" value="wn-uitlegschaal1">
 					<label for="wn-uitlegschaal1">Zo goed als geen uitleg gekregen</label>
 				</div>
@@ -942,7 +973,8 @@
 					<label for="wn-uitlegschaal2">Er was uitleg maar het was slaapverwekkend</label>
 				</div>
 				<div><input type="radio" id="wn-uitlegschaal3" name="wn-uitlegSchaal" value="wn-uitlegschaal3">
-					<label for="wn-uitlegschaal3">Er werden vaak begrippen gebruikt en niet verder uitgelegd die niet
+					<label for="wn-uitlegschaal3">Er werden vaak begrippen gebruikt en niet verder uitgelegd die
+						niet
 						voor iedereen bekend waren</label>
 				</div>
 				<div><input type="radio" id="wn-uitlegschaal4" name="wn-uitlegSchaal" value="wn-uitlegschaal4">
@@ -957,7 +989,7 @@
 						ronden</label>
 				</div>
 
-				<h2>Eigen inzicht, dus hoe goed snap je het?</h2>
+				<h3>Eigen inzicht, dus hoe goed snap je het?</h3>
 				<div><input type="radio" id="wn-inzicht1" name="wn-inzichtAntwoord" value="wn-inzicht1">
 					<label for="wn-inzicht1">Ik heb niets onthouden</label>
 				</div>
@@ -966,37 +998,40 @@
 						tegengekomen</label>
 				</div>
 				<div><input type="radio" id="wn-inzicht3" name="wn-inzichtAntwoord" value="wn-inzicht3">
-					<label for="wn-inzicht3">Ik weet het nu te kopieren en plakken en begrijp het soort van</label>
+					<label for="wn-inzicht3">Ik weet het nu te kopieren en plakken en begrijp het soort
+						van</label>
 				</div>
 				<div><input type="radio" id="wn-inzicht4" name="wn-inzichtAntwoord" value="wn-inzicht4">
 					<label for="wn-inzicht4">Ik kan het zelf schrijven</label>
 				</div>
 				<div><input type="radio" id="wn-inzicht5" name="wn-inzichtAntwoord" value="wn-inzicht5">
-					<label for="wn-inzicht5">Ik kan het zelf schrijven én aan mensen met verschillende levels van kennis
+					<label for="wn-inzicht5">Ik kan het zelf schrijven én aan mensen met verschillende
+						levels van kennis
 						uitleggen</label>
 				</div>
-
-				<label for="wn-overig">
-					<h2>Nog iets te delen? </h2>
-				</label>
-				<textarea id="wn-overig" name="wn-overig">Nee, niet per se...</textarea>
+				<div>
+					<label for="wn-overig">
+						<h3>Nog iets te delen? </h3>
+					</label>
+					<textarea id="wn-overig" name="wn-overig">Nee, niet per se...</textarea>
+				</div>
 			</div>
 
-			<button type="button" data-previous>Vorige</button>
-			<button type="button" data-next>Volgende</button>
+			<button class="pe-buttons" type="button" data-previous>Vorige</button>
+			<button class="pe-buttons" type="button" data-next>Volgende</button>
 		</fieldset>
 
 
 
 		<fieldset class="card" data-step>
 			<legend>
-				<h3 class="step-title"> <strong>
+				<h2 class="step-title"> <strong>
 						VAK: MEESTERPROEF
-					</strong> </h3>
+					</strong> </h2>
 			</legend>
 			<div class="form-group">
 
-				<h2>Welke docent(en) had je voor dit vak?</h2>
+				<h3>Welke docent(en) had je voor dit vak?</h3>
 
 				<select required name="meesterproef-docent1" id="meesterproef-docent1">
 					<option value="meesterproef-docent1-joost">Joost Faber</option>
@@ -1024,7 +1059,7 @@
 
 
 
-				<h2>Weken waarin je het vak deed:</h2>
+				<h3>Weken waarin je het vak deed:</h3>
 				<select required name="meesterproef-week" id="meesterproef-week">
 					<option value="meesterproef-week1-3">Week 1-3</option>
 					<option value="meesterproef-week4"> Week 4</option>
@@ -1035,23 +1070,25 @@
 				</select>
 
 				<label for="meesterproef-cijferSchaal">
-					<h2>Wat vond je van de lesstof op een schaal van 1 tot 10? (1= makkelijk, 10= moeilijk)</h2>
+					<h3>Wat vond je van de lesstof op een schaal van 1 tot 10? (1= makkelijk, 10= moeilijk)</h3>
 				</label>
 				<input required type="number" id="meesterproef-cijferSchaal" name="meesterproef-cijferSchaal" min="1"
 					max="10">
 
-				<h2>Hoe duidelijk is het uitgelegd?</h2>
+				<h3>Hoe duidelijk is het uitgelegd?</h3>
 				<div><input type="radio" id="meesterproef-uitlegschaal1" name="meesterproef-uitlegSchaal"
 						value="meesterproef-uitlegschaal1">
 					<label for="meesterproef-uitlegschaal1">Zo goed als geen uitleg gekregen</label>
 				</div>
 				<div><input type="radio" id="meesterproef-uitlegschaal2" name="meesterproef-uitlegSchaal"
 						value="meesterproef-uitlegschaal2">
-					<label for="meesterproef-uitlegschaal2">Er was uitleg maar het was slaapverwekkend</label>
+					<label for="meesterproef-uitlegschaal2">Er was uitleg maar het was
+						slaapverwekkend</label>
 				</div>
 				<div><input type="radio" id="meesterproef-uitlegschaal3" name="meesterproef-uitlegSchaal"
 						value="meesterproef-uitlegschaal3">
-					<label for="meesterproef-uitlegschaal3">Er werden vaak begrippen gebruikt en niet verder uitgelegd
+					<label for="meesterproef-uitlegschaal3">Er werden vaak begrippen gebruikt en niet verder
+						uitgelegd
 						die niet voor iedereen bekend waren</label>
 				</div>
 				<div><input type="radio" id="meesterproef-uitlegschaal4" name="meesterproef-uitlegSchaal"
@@ -1060,23 +1097,26 @@
 				</div>
 				<div><input type="radio" id="meesterproef-uitlegschaal5" name="meesterproef-uitlegSchaal"
 						value="meesterproef-uitlegschaal5">
-					<label for="meesterproef-uitlegschaal5">Super goede uitleg, waardoor ik geen vragen meer hoefde te
+					<label for="meesterproef-uitlegschaal5">Super goede uitleg, waardoor ik geen vragen meer
+						hoefde te
 						stellen om het vak af te ronden</label>
 				</div>
 
-				<h2>Eigen inzicht, dus hoe goed snap je het?</h2>
+				<h3>Eigen inzicht, dus hoe goed snap je het?</h3>
 				<div><input type="radio" id="meesterproef-inzicht1" name="meesterproef-inzichtAntwoord"
 						value="meesterproef-inzicht1">
 					<label for="meesterproef-inzicht1">Ik heb niets onthouden</label>
 				</div>
 				<div><input type="radio" id="meesterproef-inzicht2" name="meesterproef-inzichtAntwoord"
 						value="meesterproef-inzicht2">
-					<label for="meesterproef-inzicht2">Buiten de minor heb ik het nog niet toegepast/ben het nog niet
+					<label for="meesterproef-inzicht2">Buiten de minor heb ik het nog niet toegepast/ben
+						het nog niet
 						tegengekomen</label>
 				</div>
 				<div><input type="radio" id="meesterproef-inzicht3" name="meesterproef-inzichtAntwoord"
 						value="meesterproef-inzicht3">
-					<label for="meesterproef-inzicht3">Ik weet het nu te kopieren en plakken en begrijp het soort
+					<label for="meesterproef-inzicht3">Ik weet het nu te kopieren en plakken en begrijp
+						het soort
 						van</label>
 				</div>
 				<div><input type="radio" id="meesterproef-inzicht4" name="meesterproef-inzichtAntwoord"
@@ -1085,24 +1125,23 @@
 				</div>
 				<div><input type="radio" id="meesterproef-inzicht5" name="meesterproef-inzichtAntwoord"
 						value="meesterproef-inzicht5">
-					<label for="meesterproef-inzicht5">Ik kan het zelf schrijven én aan mensen met verschillende levels
+					<label for="meesterproef-inzicht5">Ik kan het zelf schrijven én aan mensen met
+						verschillende levels
 						van kennis uitleggen</label>
 				</div>
 
-				<label for="meesterproef-overig">
-					<h2>Nog iets te delen? </h2>
-				</label>
-				<textarea id="meesterproef-overig" name="meesterproef-overig">Nee, niet per se...</textarea>
-
+				<div>
+					<label for="meesterproef-overig">
+						<h3>Nog iets te delen? </h3>
+					</label>
+					<textarea id="meesterproef-overig" name="meesterproef-overig">Nee, niet per se...</textarea>
+				</div>
 			</div>
 
-			<button type="button" data-previous>Vorige</button>
+			<button class="pe-buttons" type="button" data-previous>Vorige</button>
 			<button type="submit">Submit</button>
 		</fieldset>
 	</form>
-
-
-
 </body>
 
 </html>

@@ -27,10 +27,12 @@ const formSteps = [...multiStepForm.querySelectorAll("[data-step]")]
 
 console.log(formSteps);
 
+// a loop so every fieldset is displayed underneath each other when javascript is disabled as opposed to having display:none
 formSteps.forEach(element => {
     element.classList.add('is-default-hidden');
 })
 
+// check the array to give the classlist to the one that's active and make that one have display: block
 let currentStep = formSteps.findIndex(step => {
     return step.classList.add("active")
 })
@@ -40,6 +42,7 @@ if (currentStep < 0) {
     showCurrentStep()
 }
 
+// incrementor is used for the validation of required input types. the click eventListener is used so the button works and makes it go to the next array
 multiStepForm.addEventListener("click", e => {
     let incrementor
     if (e.target.matches("[data-next]")) {

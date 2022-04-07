@@ -269,6 +269,8 @@ If i'm going to be honest, most regular internet users wouldn't trust the stylin
 
 https://farrahton-browser-technologies.herokuapp.com/ 
 
+Use case 
+
 ## Een (wireflow) schets van de functionaliteit met een beschrijving van de core functionality. Geef ook aan wat de functional/reliable, usable en pleasurable laag.
 
 ![breakdownSchets](https://user-images.githubusercontent.com/92303930/162079115-724a67e5-cfc4-4854-95bb-75cacca8d162.jpeg)
@@ -286,6 +288,7 @@ To make it more reliable you give feedback to the user when they have submitted 
 If i'm going to be honest, most regular internet users wouldn't trust the styling that's used with only an HTML file. Just because it's boring and so old-looking, which in their eyes could mean it's outdated so no thank you to that experience. With the use of CSS we make the website look more reliable. Just pointer cursors can already change the perspective of the user and make them want to click on things, because it looks familiar and indicates usability. It also makes things like the number input more functional since it now shows the up and down arrows.
 
 The most pleasurable layer would be with animations and a way to make the form look shorter to the user. With the use of a multistepform I wanted to achieve that. Which for the most part is a success. I only need to change the transform: scale(0) to transform: scale(1) from the keyfram fade when javascript is disabled or the other way arounf (turn it on when it's enabled). According to articles i could use a class on the body with .-no.js and add that to the selector too, but since the things feel opposite in my head (i'm brain dead currently) it's not clicking how to do just that. So let's pretend I have fixed that by just changing it manually, and wow yay it's working!! How great is this life again, I'm for sure enjoying it more now!
+<details> <summary>Sources used</summary> tutorial i used to make the JavaScript version https://www.youtube.com/watch?v=VdqtdKXxKhM </details>
 
 ## Een lijst met vier browsers waarin je hebt getest:
 	- voor de desktop 1 Chromium 1 niet-Chromium browser

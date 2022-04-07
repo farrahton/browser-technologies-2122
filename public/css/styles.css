@@ -22,19 +22,32 @@ h1 {
     text-align: center;
 }
 
-fieldset {
-    /* background-color: transparent;
-    border-radius: .3em; */
-    /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
-    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
-    /* box-shadow: rgba(58, 170, 52, 0.4) 5px 5px, rgba(58, 170, 52, 0.3) 10px 10px, rgba(58, 170, 52, 0.2) 15px 15px, rgba(58, 170, 52, 0.1)  20px 20px, rgba(58, 170, 52, 0.05) 25px 25px; */
+.card {
     background: rgba(255, 255, 255, 0.2);
     border: solid transparent;
     border-radius: 1em;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    margin: 1em;
-    /* backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px); */
+    margin: 1em;  
+    padding: .5rem;
+    max-width: 50vw;
+    margin: 0 auto;
+}
+
+.card.is-default-hidden {
+    display: none;
+}
+
+.card.is-default-hidden.active {
+    display: block;
+}
+
+.form-group:last-child {
+    margin: 0;
+}
+  
+.multi-step-form {
+    overflow: hidden;
+    position: relative;
 }
 
 legend {
@@ -46,13 +59,14 @@ legend {
 }
 
 strong { 
-    /* text-align: center; */
     width: 100%
 }
 
-h3 {
-    text-align: left
+
+input[type="text"] {
+    margin: 1em;
 }
+
 
 select {
     border: none;
@@ -76,11 +90,6 @@ input[type="number"]::-webkit-inner-spin-button {
     opacity: 1;
 }
 
-
-input[type="text"] {
-    margin: 1em;
-}
-
 div {
     display: block
 }
@@ -96,7 +105,7 @@ textarea {
     cursor: pointer;
 }
 
-.button {
+button {
     background: #1899D6;
     border: solid transparent;
     border-radius: 1em;
@@ -111,54 +120,13 @@ textarea {
     text-align: center;
     text-transform: uppercase;
     width: 10em;
-  }
+}
 
-.button:hover {
+button {
     filter: brightness(1.1);
 }
+   
  
-.card {
-    background: rgba(255, 255, 255, 0.2);
-    border: solid transparent;
-    border-radius: 1em;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    margin: 1em;  
-    padding: .5rem;
-    max-width: 25em;
-    margin: 0 auto;
-}
-
-.card.is-default-hidden {
-    display: none;
-}
-
-.card.is-default-hidden.active {
-    display: block;
-}
-
-.form-group:last-child {
-    margin: 0;
-  }
-  
-.form-group > label {
-    font-weight: bold;
-    font-size: .8em;
-    color: #333;
-  }
-  
-.form-group > input {
-    border: 1px solid #333;
-    border-radius: .25em;
-    font-size: 1rem;
-    padding: .25em;
-  }
-  
-.multi-step-form {
-    overflow: hidden;
-    position: relative;
-  }
-  
-  
     /* saw something about using a no-js class on the body and adding that to selectors and removing it when js is enabled? thats what i wanna do or find another way to change the transform of the keyframes based on of js is on or off */
   /* .no-js .showEverything {
     transform: scale(1);

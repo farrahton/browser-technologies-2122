@@ -66,6 +66,13 @@ multiStepForm.addEventListener("click", e => {
     }
 })
 
+// when you click on the button it scrolls to the top
+formButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        window.scrollTo(0, 0);
+    })
+})
+
 function showCurrentStep() {
     formSteps.forEach((step, index) => {
         step.classList.toggle("active", index === currentStep)

@@ -1,8 +1,8 @@
 # Browser Technologies eerste opdrachten
 
-- [Opdracht 1](#Opdracht-1)
-- [Opdracht 2](#Opdracht-2)
-- [Eindopracht](#Eindopdracht)
+- [Opdracht 1](#Opdracht-1-🛹-NPM-install-Progressive-enhancement)
+- [Opdracht 2](#Opdracht-2-💔-Breek-het-Web)
+- [Eindopracht](#Eindopdracht-✨-Progressive-Enhanced-Browser-Technologie)
 
 ## Opdracht 1 🛹 NPM install Progressive- enhancement
 

@@ -9,13 +9,13 @@ html {
     /* overflow-x: hidden; */
 }
 
-/* @supports (background: linear-gradient(10deg, #E9590E 24%, rgba(0,0,0,0) 24%), linear-gradient(21deg, #3AAA34 46%, #34A8E0 46%)) {
+@supports (background: linear-gradient(10deg, #E9590E 24%, rgba(0,0,0,0) 24%), linear-gradient(21deg, #3AAA34 46%, #34A8E0 46%)) {
     html { 
      background: linear-gradient(10deg, #E9590E 24%, rgba(0,0,0,0) 24%), linear-gradient(21deg, #3AAA34 46%, #34A8E0 46%);
      background-size: cover;
      background-attachment: fixed;
     }
- } */
+ }
 
 h1 {
     color: black ;

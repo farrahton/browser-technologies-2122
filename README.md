@@ -2,7 +2,7 @@
 
 - [Opdracht 1 🛹 NPM install Progressive- enhancement](#Opdracht-1-🛹-NPM-install-Progressive-enhancement)
 - [Opdracht 2 💔 Breek het Web](#Opdracht-2-💔-Breek-het-Web)
-- [Eindopdracht](#Eindopdracht)
+- [Eindopdracht ✨](#Eindopdracht)
 
 # Opdracht 1 🛹 NPM install Progressive- enhancement
 

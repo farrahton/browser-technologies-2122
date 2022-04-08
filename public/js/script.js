@@ -44,7 +44,7 @@ multiStepForm.addEventListener("click", e => {
     }
 })
 
-// when you click on the button it scrolls to the top
+// when you click on the button it scrolls to the top instead of staying at the bottom with the view of the button
 formButtons.forEach(btn => {
     btn.addEventListener('click', () => {
         window.scrollTo(0, 0);
@@ -53,7 +53,7 @@ formButtons.forEach(btn => {
 
 function showCurrentStep() {
     formSteps.forEach((step, index) => {
-        // add the active class if our index is equal to the currentstep
+        // add the active class if our index is equal to the currentstep to remove the class list from the previous step to only the current step in the form 
         step.classList.toggle("active", index === currentStep)
     })
 }
